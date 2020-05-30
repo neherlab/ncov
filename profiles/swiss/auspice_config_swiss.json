@@ -94,18 +94,18 @@
     "region"
   ],
   "display_defaults": {
-    "color_by": "division",
+    "color_by": "clade_membership",
     "distance_measure": "num_date",
     "geo_resolution": "division",
     "map_triplicate": true,
     "branch_label": "none"
   },
   "filters": [
-    "recency",
-    "location",
-    "division",
     "country",
     "region",
+    "recency",
+    "division",
+    "location",
     "host",
     "author"
   ],
