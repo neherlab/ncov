@@ -31,41 +31,37 @@ country	Portugal	#DE3D27
 country	Greece	#DB2823
 
 
-division	Basel-Stadt	#fee6ce
-division	Basel-Landschaft	#fdae6b
-division	Aargau	#e6550d
+division	Liechtenstein	#5E1D9D
+division	St. Gallen	#4C24AF
+division	Sankt Gallen	#4C24AF
+division	Graubünden	#4433BE
+division	Thurgau	#3F45C8
+division	Appenzell Ausserrhoden	#3E58CF
+division	Appenzell Innerrhoden	#416BCF
+division	Glarus	#447DCC
+division	Zürich	#4A8BC3
+division	Schaffhausen	#5098B9
+division	Luzern	#58A2AC
+division	Lucerne	#58A2AC
+division	Uri	#61AA9D
+division	Schwyz	#6BB18E
+division	Obwalden	#76B680
+division	Nidwalden	#82BA71
+division	Zug	#8FBC65
+division	Aargau	#9DBE5A
+division	Basel-Stadt	#ABBD52
+division	Basel-Landschaft	#B9BC4A
+division	Basel-Land	#B9BC4A
+division	Bern	#D1B440
+division	Fribourg	#DAAC3D
+division	Solothurn	#E1A13A
+division	Neuchâtel	#E69437
+division	Jura	#E68134
+division	Vaud	#E56E30
+division	Valais	#E2562B
+division	Geneva	#DE3F27
+division	Ticino	#DB2823
 
-division	Zürich	#d95f0e
-
-division	Glarus	#eff3ff
-division	Schaffhausen	#c6dbef
-division	Appenzell Ausserrhoden	#9ecae1
-division	Appenzell Innerrhoden	#6baed6
-division	St. Gallen	#4292c6
-division	Graubünden	#2171b5
-division	Thurgau	#084594
-
-division	Luzern	#edf8e9
-division	Lucerne	#edf8e9
-division	Uri	#c7e9c0
-division	Schwyz	#a1d99b
-division	Obwalden	#74c476
-division	Nidwalden	#31a354
-division	Zug	#006d2c
-
-division	Ticino	#dd1c77
-
-division	Geneva	#efedf5
-division	Vaud	#bcbddc
-division	Valais	#756bb1
-
-division	Bern	#fee5d9
-division	Fribourg	#fcae91
-division	Solothurn	#fb6a4a
-division	Neuchâtel	#de2d26
-division	Jura	#a50f15
-
-division	Liechtenstein	#67a9cf
 division	Switzerland	#636363
 
 recency	Older	#416DCE

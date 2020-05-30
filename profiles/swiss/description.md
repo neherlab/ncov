@@ -8,10 +8,10 @@ Extended periods without mutations are therefore not uncommon and direct links o
 
 The data from Switzerland was contributed by the following groups:
 
- * [Computational Evolution group](https://bsse.ethz.ch/cevo)at D-BSSE of the ETHZ in Basel. Samples were provided by [Viollier AG](www.viollier.ch), sequenced on Illumina technology by the Genomic Facility Basel (lead [C. Beisel](https://bsse.ethz.ch/genomicsbasel)), and processed with the [V-Pipe viral assembly pipeline](https://cbg-ethz.github.io/V-pipe/sars-cov-2/) ([Ivan Topolsky, Pedro Ferreira, Philipp Jablonski, Susana Posada-​Céspedes, Niko Beerenwinkel](https://bsse.ethz.ch/cbg)).
- * University Hospital Basel
- * CHUG Geneva
- * University Zürich
+ * [Computational Evolution group](https://bsse.ethz.ch/cevo) at D-BSSE of the ETHZ in Basel. Samples were provided by [Viollier AG](www.viollier.ch), sequenced on Illumina technology by the Genomic Facility Basel (lead [C. Beisel](https://bsse.ethz.ch/genomicsbasel)), and processed with the [V-Pipe viral assembly pipeline](https://cbg-ethz.github.io/V-pipe/sars-cov-2/) ([Ivan Topolsky, Pedro Ferreira, Philipp Jablonski, Susana Posada-​Céspedes, Niko Beerenwinkel](https://bsse.ethz.ch/cbg)).
+ * University Hospital Basel, [Clinical Virology](https://www.unispital-basel.ch/ueber-uns/bereiche/medizinische-querschnittsfunktionen/kliniken-institute-abteilungen/labormedizin/ueber-uns/klinische-virologie/kontakt-und-oeffnungszeiten/) and [Clinical Microbiology](https://www.unispital-basel.ch/ueber-uns/bereiche/medizinische-querschnittsfunktionen/kliniken-institute-abteilungen/labormedizin/ueber-uns/klinische-bakteriologie-mykologie/kontakt-und-oeffnungszeiten/).
+ * University Hospital of Geneva, [Virological laboratories](https://www.hug-ge.ch/laboratoire-virologie) and [Center for emerging viral diseases](https://www.hug-ge.ch/en/centre-emerging-viral-diseases)
+ * University Hospital Zurich and University Zürich, [Institute for medical virology](https://www.virology.uzh.ch/de/research/gtrkolad.html)
 
 All data we use (Swiss and international) are deposited in GISAID.
 We gratefully acknowledge the authors, originating and submitting laboratories of the genetic sequence and metadata made available through [GISAID](https://gisaid.org) on which this research is based. A full listing of all originating and submitting laboratories is available below. An attribution table is available by clicking on "Download Data" at the bottom of the page and then clicking on "Strain Metadata" in the resulting dialog box.
