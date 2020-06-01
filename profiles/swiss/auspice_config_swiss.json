@@ -98,7 +98,7 @@
     "distance_measure": "num_date",
     "geo_resolution": "division",
     "map_triplicate": true,
-    "branch_label": "none"
+    "branch_label": "clade"
   },
   "filters": [
     "country",
