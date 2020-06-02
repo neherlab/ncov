@@ -1,3 +1,17 @@
+division	Cali
+division	Waikato
+division	Southern
+division	Midcentral
+division	Combined Wellington
+division	Lakes
+division	Wairarapa
+division	Bay of Plenty
+division	Counties Manukau
+division	Canterbury
+division	Nelson Marlborough
+division	Waitemata
+division	Midcentral
+division	Timor-Leste
 
 location	Wuhan
 location	Tianmen
@@ -252,10 +266,16 @@ location	Bergamo
 location	Milan
 location	Verona IT
 location	L'Aquila
+location	Simat de la Valldigna
 location	Teramo
 location	Grau de Sagunt
 location	Valencia
 location	Valencia Horta
+location	Almassera
+location	Almenara
+location	Soneja
+location	Albal
+location	Museros
 location	Beniganim
 location	Llutxent
 location	Tavernes de la Valldigna
@@ -347,6 +367,18 @@ location	Funza
 location	Cali
 location	Buga
 location	Ibague
+location	Cienaga
+location	Tumaco
+location	Bello
+location	Leticia
+location	Manizales
+location	Cucuta
+location	Cartagena
+location	Barranquilla
+location	Barrancabermeja
+location	Bucaramanga
+location	Armenia
+location	Popayan
 location	Medellin
 location	Dosquebradas
 location	Envigado
@@ -365,7 +397,6 @@ location	Tierralta
 location	Monteria
 location	Valledupar
 location	Cajica
-location	Cúcuta
 location	Villavicencio
 location	Chía
 location	Yumbo
@@ -381,6 +412,12 @@ location	Joinville
 location	Maceio
 location	Manaus
 location	Feira de Santana
+location	Nova Iguacu
+location	Itaborai
+location	Belford Roxo
+location	Duque de Caxias
+location	Petropolis
+location	Teresopolis
 location	Vila Velha
 location	Mexico City
 location	San Rafael de Alajuela
@@ -515,6 +552,7 @@ location	Miramar
 location	Adams County WA
 location	Adams County WI
 location	New Orleans
+location	Panola County
 location	Morehouse Parish
 location	Tensas Parish
 location	Rapides Parish
@@ -613,6 +651,7 @@ division	Taoyuan
 division	Aichi
 division	Tokyo
 division	Japan
+division	Diamond Princess
 division	Kanto
 division	Chiba
 division	Ishikawa
@@ -683,6 +722,7 @@ division	Tbilisi
 division	Vietnam
 division	Thanh Hoa
 division	Ho Chi Minh City
+division	Quangninh
 division	Hanoi
 division	Vinhphuc
 division	Red River Delta
@@ -1070,6 +1110,7 @@ division	Halland
 division	Czech Republic
 division	Sweden
 division	Stockholm
+division	Orebro
 division	Uppsala
 division	Dalarna
 division	Skane
@@ -1153,6 +1194,12 @@ division	Colombia
 division	Meta
 division	Caldas
 division	Valle del Cauca
+division	Cauca
+division	Quindio
+division	Santander
+division	Atlantico
+division	Bolivar
+division	Departamento de Amazonas
 division	Boyaca
 division	Cundinamarca
 division	Narino
@@ -1233,6 +1280,7 @@ division	Idaho
 division	Montana
 division	California
 division	Grand Princess
+division	Grand Princess 2nd cruise
 division	Oregon
 division	Washington
 division	Hawaii
@@ -1271,6 +1319,7 @@ country	Singapore
 country	Brunei
 country	Indonesia
 country	Guam
+country	Timor-Leste
 country	Australia
 country	New Zealand
 country	Saudi Arabia

@@ -11,6 +11,11 @@
       "type": "categorical"
     },
     {
+      "key": "pangolin_lineage",
+      "title": "Pangolin lineage",
+      "type": "categorical"
+    },
+    {
       "key": "location",
       "title": "Location",
       "type": "categorical"
@@ -105,17 +110,16 @@
   "filters": [
     "recency",
     "clade_membership",
-    "location",
-    "division",
-    "country",
     "region",
+    "country",
+    "division",
+    "location",
     "host",
     "author"
   ],
   "panels": [
     "tree",
     "map",
-    "entropy",
-    "frequencies"
+    "entropy"
   ]
 }
