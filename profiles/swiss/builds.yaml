@@ -10,6 +10,8 @@ builds:
     geographic_scale: country
     region: Europe
     country: Switzerland
+
+inactive_builds:
   basel-stadt:
     subsampling_scheme: canton
     geographic_scale: division
