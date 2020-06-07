@@ -1,17 +1,4 @@
-division	Cali
-division	Waikato
-division	Southern
-division	Midcentral
-division	Combined Wellington
-division	Lakes
-division	Wairarapa
-division	Bay of Plenty
-division	Counties Manukau
-division	Canterbury
-division	Nelson Marlborough
-division	Waitemata
-division	Midcentral
-division	Timor-Leste
+
 
 location	Wuhan
 location	Tianmen
@@ -33,9 +20,11 @@ location	Zhongshan
 location	Shanwei
 location	Yangjiang
 location	Shaoguan
+division	Guangzhou
 location	Dongguan
 location	Zhanjiang
 location	Beijing
+location	Harbin
 location	Meizhou
 location	Fuzhou
 location	Yichun
@@ -82,6 +71,8 @@ location	Modasa
 location	Rajkot
 location	Kodinar
 location	Jaipur
+location	Khedbrahma
+location	Bayad
 location	North 24 Parganas
 location	Bikaner
 location	Junagadh
@@ -153,6 +144,7 @@ location	Munich
 location	Duesseldorf
 location	Delft
 location	Utrecht
+location	Zeeland
 location	Zeewolde
 location	Loon op zand
 location	Berlicum
@@ -244,6 +236,26 @@ location	Montignies-Sur-Sambre
 location	Tertre
 location	Heverlee
 location	Kain
+location	Wespelaar
+location	Molenstede
+location	Kaggevinne
+location	Sterrebeek
+location	Luttre
+location	Givry
+location	Wilrijk
+location	Ramsel
+location	Baudour
+location	Neufmaison
+location	Veltem-beisem
+location	Shape
+location	Flénu
+location	Ghlin
+location	Lotenhulle
+location	Thulin
+location	Wilsele
+location	Paal
+location	Wadelincourt
+location	Grand-Leez
 location	Winksele
 location	Jemappes
 location	Bassilly
@@ -327,7 +339,7 @@ location	Rincon de la Victoria
 location	Almeria
 location	Torremolinos
 location	Benajarafe
-location	Velez_Malaga
+location	Velez Malaga
 location	Antequera
 location	Olleria
 location	Canet d'en Berenguer
@@ -342,6 +354,7 @@ location	Puzol
 location	Benirredra
 location	Luxembourg
 location	England
+location	Warwickshire
 location	South Yorkshire
 location	London
 location	Northamtonshire
@@ -491,7 +504,8 @@ location	San Joaquin County
 location	Sacramento County
 location	Santa Clara County
 location	Davis
-location	Grant County
+location	Grant County WA
+location	Grant County WI
 location	Snohomish County
 location	King County
 location	Clark County
@@ -635,6 +649,7 @@ division	Shandong
 division	Zhejiang
 division	Fujian
 division	Guangdong
+division	Heilongjiang
 division	Shanghai
 division	Hong Kong
 division	Taiwan
@@ -668,6 +683,7 @@ division	Chattogram
 division	Nepal
 division	Kathmandu
 division	Sri Lanka
+division	Pasuruan
 division	Selangor
 division	Kuala Lumpur
 division	Uttar Pradesh
@@ -745,6 +761,7 @@ division	Karachi
 division	Bangladesh
 division	Mirpur
 division	Narayanganj
+division	Timor-Leste
 division	Australia
 division	South Australia
 division	Queensland
@@ -757,7 +774,23 @@ division	Guam
 division	New Zealand
 division	Otago
 division	Auckland
+division	Waikato
+division	Southern
+division	MidCentral
+division	Combined Wellington
+division	Lakes
+division	Wairarapa
+division	Bay of Plenty
+division	Counties Manukau
+division	Canterbury
+division	Nelson Marlborough
+division	Waitemata
 division	United Arab Emirates
+division	Muscat
+division	North Batinah
+division	South Batinah
+division	Dakhiliyah
+division	Buraimi
 division	Saudi Arabia
 division	Riyadh
 division	Qatar
@@ -964,6 +997,30 @@ division	Havelange
 division	Fontaine-l Eveque
 division	Lummen
 division	Mons
+division	Bury
+division	Overijse
+division	Scherpenheuvel-Zichem
+division	Jette
+division	Geetbets
+division	Dour
+division	Seneffe
+division	Machelen
+division	Laken
+division	Mepel
+division	Le roeulx
+division	Temse
+division	Jurbise
+division	Edingen
+division	Madegem
+division	Morlanwelz
+division	Malle
+division	Aarschot
+division	Tessenderlo
+division	Vlaams-Brabant
+division	Henegouwen
+division	Aalter
+division	Hensies
+division	Beloeil
 division	Boussu
 division	Tienen
 division	Grimbergen
@@ -1014,6 +1071,7 @@ division	Duesseldorf
 division	Baden-Wuerttemberg
 division	Munich
 division	Frankfurt
+division	Rostock
 division	North Rhine Westphalia
 division	Netherlands
 division	Milheeze
@@ -1032,6 +1090,7 @@ division	Ghent
 division	Overijssel
 division	Gelderland
 division	Limburg
+division	Limburg BE
 division	Drenthe
 division	North Brabant
 division	Leiden
@@ -1069,6 +1128,7 @@ division	Graubünden
 division	Schwyz
 division	Comunitat Valenciana
 division	Athens
+division	Sardinia
 division	Komen
 division	Italy
 division	Italian cruise ship
@@ -1076,6 +1136,12 @@ division	South Tyrol
 division	Lazio
 division	Marche
 division	Lombardy
+division	Emilia-Romagna
+division	Molise
+division	PA Trento
+division	Sicily
+division	Valle D'Aosta
+division	Basilicata
 division	Abruzzo
 division	Apulia
 division	Rome
@@ -1138,9 +1204,16 @@ division	Oyo State
 division	Ghana
 division	Senegal
 division	Gambia
+division	Morocco
+division	Casablanca
+division	Tunisia
+division	Bizerte
+division	Ben Arous
 division	Algeria
+division	Ouarzazate
 division	Lagos
 division	Uganda
+division	Kenya
 division	Democratic Republic of the Congo
 division	Kinshasa
 division	Sud Kivu
@@ -1160,6 +1233,8 @@ division	Thies
 division	Blida
 division	Boufarik
 division	Chile
+division	Puerto Natales
+division	Vina del Mar
 division	Antofagasta
 division	Chillan
 division	Concepcion
@@ -1184,6 +1259,8 @@ division	Rio de Janeiro
 division	Amapa
 division	Santa Catarina
 division	Alagoas
+division	Acre
+division	Maranhao
 division	Argentina
 division	Ciudad Autonoma de Buenos Aires
 division	Buenos Aires
@@ -1193,6 +1270,7 @@ division	Uruguay
 division	Colombia
 division	Meta
 division	Caldas
+division	Cali
 division	Valle del Cauca
 division	Cauca
 division	Quindio
@@ -1225,7 +1303,8 @@ division	Panama City
 division	Panama
 division	Alajuela
 division	Heredia
-division	Cartago
+division	Cartago CO
+division	Cartago CR
 division	San Jose
 division	Mexico
 division	Gomez Palacios
@@ -1327,6 +1406,7 @@ country	Qatar
 country	United Arab Emirates
 country	Kuwait
 country	Lebanon
+country	Oman
 country	Iran
 country	Israel
 country	Jordan
@@ -1369,10 +1449,13 @@ country	Portugal
 country	Greece
 country	Egypt
 country	Nigeria
+country	Kenya
 country	Ghana
 country	Senegal
 country	Gambia
 country	Algeria
+country	Tunisia
+country	Morocco
 country	Uganda
 country	Democratic Republic of the Congo
 country	South Africa
@@ -1397,9 +1480,9 @@ recency	3-7 days ago
 recency	1-2 days ago
 recency	New
 
-region	Oceania
 region	Asia
+region	Oceania
 region	Africa
 region	Europe
-region	North America
 region	South America
+region	North America

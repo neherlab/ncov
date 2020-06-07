@@ -1,5 +1,5 @@
 {
-  "title": "新型冠状病毒（hCoV-19）的基因组流行病学",
+  "title": "Genomic epidemiology of novel coronavirus",
   "build_url": "https://github.com/nextstrain/ncov",
   "maintainers": [
     {"name": "the Nextstrain team", "url": "https://nextstrain.org/"}
@@ -8,6 +8,11 @@
     {
       "key": "legacy_clade_membership",
       "title": "Old Nextstrain clade",
+      "type": "categorical"
+    },
+    {
+      "key": "pangolin_lineage",
+      "title": "Pangolin lineage",
       "type": "categorical"
     },
     {
@@ -96,18 +101,19 @@
     "region"
   ],
   "display_defaults": {
-    "color_by": "clade_membership",
+    "color_by": "region",
     "distance_measure": "num_date",
     "geo_resolution": "country",
     "map_triplicate": true,
-    "branch_label": "none"
+    "branch_label": "clade"
   },
   "filters": [
     "recency",
-    "location",
-    "division",
-    "country",
+    "clade_membership",
     "region",
+    "country",
+    "division",
+    "location",
     "host",
     "author"
   ],
