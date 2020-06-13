@@ -509,6 +509,57 @@ Lebanon/S6_766/2020
 USA/ID-UW-2198/2020
 USA/MDH-8137/2020
 
+# Excluded because seem to have sequencing issues - many reversions
+# See slack channel comment & screenshot: https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1591901131438800
+# This is from run 5bd87ffa-8ff9-4f4b-90a2-096b64eb6370
+SouthAfrica/Tygerberg_01/2020
+SouthAfrica/Tygerberg_02/2020
+SouthAfrica/Tygerberg_03/2020
+SouthAfrica/Tygerberg_04/2020
+SouthAfrica/Tygerberg_05/2020
+SouthAfrica/Tygerberg_06/2020
+SouthAfrica/Tygerberg_07/2020
+SouthAfrica/Tygerberg_08/2020
+SouthAfrica/Tygerberg_09/2020
+SouthAfrica/Tygerberg_10/2020
+SouthAfrica/Tygerberg_11/2020
+SouthAfrica/Tygerberg_12/2020
+SouthAfrica/Tygerberg_13/2020
+SouthAfrica/Tygerberg_14/2020
+SouthAfrica/Tygerberg_15/2020
+SouthAfrica/Tygerberg_16/2020
+SouthAfrica/Tygerberg_17/2020
+SouthAfrica/Tygerberg_18/2020
+SouthAfrica/Tygerberg_19/2020
+SouthAfrica/Tygerberg_20/2020
+SouthAfrica/Tygerberg_21/2020
+SouthAfrica/Tygerberg_22/2020
+SouthAfrica/Tygerberg_23/2020
+SouthAfrica/Tygerberg_24/2020
+SouthAfrica/Tygerberg_25/2020
+SouthAfrica/Tygerberg_26/2020
+SouthAfrica/Tygerberg_27/2020
+SouthAfrica/Tygerberg_28/2020
+SouthAfrica/Tygerberg_29/2020
+SouthAfrica/Tygerberg_30/2020
+SouthAfrica/Tygerberg_31/2020
+SouthAfrica/Tygerberg_32/2020
+SouthAfrica/Tygerberg_33/2020
+SouthAfrica/Tygerberg_34/2020
+SouthAfrica/Tygerberg_35/2020
+SouthAfrica/Tygerberg_36/2020
+SouthAfrica/Tygerberg_37/2020
+SouthAfrica/Tygerberg_38/2020
+SouthAfrica/Tygerberg_41/2020
+SouthAfrica/Tygerberg_42/2020
+SouthAfrica/Tygerberg_43/2020
+SouthAfrica/Tygerberg_44/2020
+SouthAfrica/Tygerberg_45/2020
+SouthAfrica/Tygerberg_46/2020
+SouthAfrica/Tygerberg_47/2020
+SouthAfrica/Tygerberg_48/2020
+SouthAfrica/Tygerberg_50/2020
+
 # Bat and pangolin relatives, too divergent to be included here
 bat/Yunnan/RaTG13/2013
 pangolin/Guandong/1/2020
@@ -669,4 +720,18 @@ Wuhan/WHUH008/2020
 #40+ mutations
 Russia/SCPM-O-05/2020
 
+# Likely consecutive days sampling dates from same patient Germany/NRW-42/2020, all 68 yo male from Dusseldorf as per GISAID metadata
+Germany/NRW-42-2/2020
+Germany/NRW-42-3/2020
 
+# Submitting hospital notes duplicate sampling in preprint 10.1101/2020.05.19.20107144, both same collection date 69 yo male, arbitrarily keeping USA/IL-NM082/2020 as sequences are identical
+USA/IL-NM087/2020
+
+# Subsequent (BAL) sampling of Italy/INMI2-N/2020 (NP sample)
+Italy/INMI2-B/2020
+
+# According to GISAID metadata duplicate entries for 24 yo male in Kalmthout
+Belgium/VDLH-030548/2020
+# Likely duplicate case BAL sample based on metadata: collection same day for hospitalized 51 yo male in Liege with identical viral genome as NP swab Belgium/ULG-9620/2020 
+# BALs are few and far between in the Belgian data, increasing likelihood this was a single patient multi-site collection.
+Belgium/ULG-9732/2020
