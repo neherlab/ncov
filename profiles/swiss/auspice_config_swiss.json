@@ -29,6 +29,16 @@
       "type": "categorical"
     },
     {
+      "key": "pangolin_lineage",
+      "title": "Pangolin Lineage",
+      "type": "categorical"
+    },
+    {
+      "key": "legacy_clade_membership",
+      "title": "Old Nextstrain clades",
+      "type": "categorical"
+    },
+    {
       "key": "host",
       "title": "Host",
       "type": "categorical"
@@ -99,8 +109,7 @@
     "geo_resolution": "division",
     "map_triplicate": true,
     "branch_label": "clade",
-    "show_transmission_lines": false,
-    "normalize_frequencies": true 
+    "transmission_lines": false
   },
   "filters": [
     "country",
