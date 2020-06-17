@@ -1,4 +1,4 @@
-This phylogeny shows evolutionary relationships of hCoV-19 (or SARS-CoV-2) viruses from the ongoing novel coronavirus COVID-19 pandemic with a particular focus on Switzerland.
+This phylogeny shows evolutionary relationships of SARS-CoV-2 viruses from the ongoing novel coronavirus COVID-19 pandemic with a particular focus on Switzerland.
 We aim to include as many genomes from Switzerland as possible.
 In addition, we include virus genomes from other European countries and to lesser extent from the rest of the world to provide phylogenetic context.
 This context is important to understand how different outbreaks are connected and how the virus might have spread around the globe.

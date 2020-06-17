@@ -10,6 +10,7 @@ builds:
     geographic_scale: country
     region: Europe
     country: Switzerland
+    title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
 
 inactive_builds:
   basel-stadt:
