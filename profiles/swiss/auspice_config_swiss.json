@@ -109,7 +109,8 @@
     "geo_resolution": "division",
     "map_triplicate": true,
     "branch_label": "clade",
-    "transmission_lines": false
+    "transmission_lines": false,
+    "panels": ["map","tree","entropy"]
   },
   "filters": [
     "country",
@@ -123,6 +124,7 @@
   "panels": [
     "tree",
     "map",
-    "entropy"
+    "entropy",
+    "frequencies"
   ]
 }
