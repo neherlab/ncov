@@ -10,6 +10,9 @@ rule download:
         aws s3 cp s3://nextstrain-ncov-private/sequences.fasta.gz - | gunzip -cq > {output.sequences:q}
         """
 
+from datetime import date
+from treetime.utils import numeric_date
+
 rule filter:
     message:
         """
@@ -27,7 +30,8 @@ rule filter:
         "logs/filtered.txt"
     params:
         min_length = config["filter"]["min_length"],
-        exclude_where = config["filter"]["exclude_where"]
+        exclude_where = config["filter"]["exclude_where"],
+        date = numeric_date(date.today())
     conda: config["conda_environment"]
     shell:
         """
@@ -35,6 +39,7 @@ rule filter:
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --include {input.include} \
+            --max-date {params.date} \
             --exclude {input.exclude} \
             --exclude-where {params.exclude_where}\
             --min-length {params.min_length} \
@@ -682,6 +687,44 @@ rule rename_legacy_clades:
             json.dump({"nodes":new_data}, fh)
 
 
+rule gisaid_clades:
+    message: "Adding internal clade labels"
+    input:
+        tree = rules.refine.output.tree,
+        aa_muts = rules.translate.output.node_data,
+        nuc_muts = rules.ancestral.output.node_data,
+        clades = config["files"]["gisaid_clades"]
+    output:
+        clade_data = "results/{build_name}/temp_gisaid_clades.json"
+    log:
+        "logs/gisaid_clades_{build_name}.txt"
+    conda: config["conda_environment"]
+    shell:
+        """
+        augur clades --tree {input.tree} \
+            --mutations {input.nuc_muts} {input.aa_muts} \
+            --clades {input.clades} \
+            --output-node-data {output.clade_data} 2>&1 | tee {log}
+        """
+
+
+rule rename_gisaid_clades:
+    input:
+        node_data = rules.gisaid_clades.output.clade_data
+    output:
+        clade_data = "results/{build_name}/gisaid_clades.json"
+    run:
+        import json
+        with open(input.node_data, 'r', encoding='utf-8') as fh:
+            d = json.load(fh)
+            new_data = {}
+            for k,v in d['nodes'].items():
+                if "clade_membership" in v:
+                    new_data[k] = {"gisaid_clade_membership": v["clade_membership"]}
+        with open(output.clade_data, "w") as fh:
+            json.dump({"nodes":new_data}, fh)
+
+
 rule colors:
     message: "Constructing colors file"
     input:
@@ -746,6 +789,37 @@ rule tip_frequencies:
             --output {output.tip_frequencies_json} 2>&1 | tee {log}
         """
 
+rule nucleotide_mutation_frequencies:
+    message: "Estimate nucleotide mutation frequencies"
+    input:
+        alignment = rules.combine_samples.output.alignment,
+        metadata = _get_metadata_by_wildcards
+    output:
+        frequencies = "results/{build_name}/nucleotide_mutation_frequencies.json"
+    log:
+        "logs/nucleotide_mutation_frequencies_{build_name}.txt"
+    params:
+        min_date = config["frequencies"]["min_date"],
+        minimal_frequency = config["frequencies"]["minimal_frequency"],
+        pivot_interval = config["frequencies"]["pivot_interval"],
+        stiffness = config["frequencies"]["stiffness"],
+        inertia = config["frequencies"]["inertia"]
+    conda: config["conda_environment"]
+    shell:
+        """
+        augur frequencies \
+            --method diffusion \
+            --alignments {input.alignment} \
+            --gene-names nuc \
+            --metadata {input.metadata} \
+            --min-date {params.min_date} \
+            --minimal-frequency {params.minimal_frequency} \
+            --pivot-interval {params.pivot_interval} \
+            --stiffness {params.stiffness} \
+            --inertia {params.inertia} \
+            --output {output.frequencies} 2>&1 | tee {log}
+        """
+
 def export_title(wildcards):
     # TODO: maybe we could replace this with a config entry for full/human-readable build name?
     location_name = wildcards.build_name
@@ -776,7 +850,6 @@ def _get_node_data_by_wildcards(wildcards):
         rules.translate.output.node_data,
         rules.rename_legacy_clades.output.clade_data,
         rules.clades.output.clade_data,
-        rules.pangolin.output.clade_data,
         rules.recency.output.node_data,
         rules.traits.output.node_data
     ]

@@ -36,6 +36,7 @@ files:
   description_zh: "config/description_zh.md"
   clades: "config/clades.tsv"
   legacy_clades: "config/legacy_clades.tsv"
+  gisaid_clades: "config/gisaid_clades.tsv"
 
 
 # Filter settings
@@ -91,6 +92,11 @@ frequencies:
   # KDE bandwidths in proportion of a year to use per strain.
   narrow_bandwidth: 0.05
   proportion_wide: 0.0
+
+  # Diffusion frequency settings
+  minimal_frequency: 0.01
+  stiffness: 20
+  inertia: 0.2
 
 #
 # Region-specific settings
