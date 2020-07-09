@@ -4,6 +4,10 @@ This repository analyzes viral genomes using [Nextstrain](https://nextstrain.org
 
 We maintain a number of publicly-available builds, visible at [nextstrain.org/ncov](https://nextstrain.org/ncov).
 
+In July 2020, we introduced some major changes to this repository.
+If you were running customized builds before this, these changes may cause some merge conflicts.
+[Read here](https://github.com/nextstrain/ncov/blob/master/docs/change_log_2020-07.md) to find out about all the changes, and which ones may impact custom runs.
+
 ---
 # Resources
 
@@ -37,7 +41,7 @@ We issued weekly Situation Reports for the first ~5 months of the pandemic. You 
 ### FAQs  
 
 - Can't find your sequences in Nextstrain? Check [here](./docs/data_faq.md) for common reasons why your sequences may not be appearing.
-- For information about how clades are defined, and the currently named clades, please see [here](./docs/clades.md).
+- For information about how clades are defined, and the currently named clades, please see [here](./docs/naming_clades.md).
 
 ### Bioinformatics notes
 

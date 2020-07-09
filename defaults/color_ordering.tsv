@@ -66,18 +66,31 @@ location	Uttara
 location	Gulshan
 location	Mirpur
 location	Shailokupa
+location	Moulvibazar
+location	Habiganj
+location	Brahmanbaria
+location	Pabna
+location	Chandpur
 location	Kalia
+location	Kodomtoly
+location	Tejgaon
+location	Jatrabari
 location	Sador
 location	Mohammadpur
 location	Agargaon
 location	Surat
+location	Olpad
+location	Talod
 location	Gandhinagar
 location	Mansa
 location	Kolkata
 location	Kadi
 location	Kalol
 location	Modasa
+location	Chuda
 location	Rajkot
+location	Gondal
+location	Jetpur
 location	Kodinar
 location	Jaipur
 location	Khedbrahma
@@ -134,6 +147,10 @@ location	Clayton
 location	Auckland
 location	Gilgit
 location	Riyadh
+location	Guediawaye
+location	Mbao
+location	Yeumbeul
+location	Velingara
 location	Hawali
 location	Dasman
 location	Ulan-Ude
@@ -556,6 +573,7 @@ location	Yernée-Fraineux
 location	Starnberg
 location	Strasbourg
 location	Rome
+location	Naples
 location	Taranto
 location	Lecce
 location	Brindisi
@@ -586,6 +604,9 @@ location	Elda
 location	Vitoria-Gasteiz
 location	Donostia-San Sebastian
 location	Sevilla
+location	Alcala de Henares
+location	Arganda del Rey
+location	Parla
 location	Pamplona
 location	Baranain
 location	Alcobendas
@@ -604,6 +625,7 @@ location	Pradejon
 location	Echavarri
 location	Portugalete
 location	Torres De Elorz
+location	Bizkaia
 location	Bermeo
 location	Rota
 location	Puerto Santa Maria
@@ -616,6 +638,7 @@ location	Algeciras
 location	La Linea de la Concepcion
 location	Conil de la Frontera
 location	Madrid
+location	Barcelona
 location	Muro
 location	Palma de Mallorca
 location	Alamedilla
@@ -870,11 +893,13 @@ location	Benton County
 location	Kittitas County
 location	Seattle
 location	Los Angeles
+location	Imperial County
 location	San Francisco County
 location	California
 location	Columbus OH
 location	Columbus WI
 location	Cincinnati
+location	Miami
 location	Ketchikan
 location	Fairbanks
 location	Mat-Su
@@ -896,6 +921,17 @@ location	Santa Clara County
 location	Davis
 location	Grant County WA
 location	Grant County WI
+location	Winnebago County
+location	Lafayette County
+location	Rock County
+location	Green County
+location	Milwaukee County
+location	Ozaukee County
+location	Fond Du Lac County
+location	Waukesha County
+location	Jefferson County WI
+location	Washington County WI
+location	Columbia County WI
 location	Clark County
 location	Umatilla County
 location	Phoenix
@@ -933,6 +969,7 @@ location	Cayuga County
 location	Schenectady County
 location	Washington County NY
 location	Washington County OR
+location	Columbia County OR
 location	Albany County
 location	Putnam County
 location	New York City
@@ -993,7 +1030,6 @@ location	Cudahy
 location	Mequon
 location	Wauwatosa
 location	Greenfield
-location	Milwaukee
 location	Brown Deer
 location	Greater Milwaukee Area
 location	Slinger
@@ -1061,6 +1097,8 @@ location	Accra
 location	Cape Town Metro
 location	Montérégie
 location	Lanaudière
+location	Al Matariyyah
+location	Kfar Saba
 
 
 
@@ -1095,9 +1133,18 @@ division	Manila
 division	Keelung
 division	Aichi
 division	Tokyo
+division	Nagasaki
+division	Hokuriku
+division	Hokkaido
+division	Kansai
+division	Kyusyu
+division	Chubu
+division	Tohoku
 division	Japan
 division	Diamond Princess
 division	Kanto
+division	Chushikoku
+division	Hokurikushinsyu
 division	Chiba
 division	Ishikawa
 division	Saitama
@@ -1110,6 +1157,7 @@ division	Chungcheongnam
 division	Seoul
 division	South Korea
 division	Chattogram
+division	Sylhet
 division	Nepal
 division	Kathmandu
 division	Sri Lanka
@@ -1145,8 +1193,10 @@ division	Ramat Gan
 division	Iran
 division	Tehran
 division	Semnan
+division	Bahrain
 division	Doha
 division	Dhaka
+division	Yeumbeul
 division	Jhenaidha
 division	Narail
 division	Bagherhat
@@ -1196,6 +1246,7 @@ division	Karachi
 division	Islamabad
 division	Rawalpindi
 division	Bangladesh
+division	Rajshahi
 division	Rangpur
 division	Mirpur
 division	Tangail
@@ -1311,6 +1362,15 @@ division	Republic of Sakha
 division	Republic of Kabardino-Balkaria
 division	Republic of Crymea
 division	Republic of Tatarstan
+division	Bulgaria
+division	Blagoevgrad
+division	Dupnitza
+division	Kyustendil
+division	Pazardzhik
+division	Pleven
+division	Smolyan
+division	Sofia
+division	Vidin
 division	Slovenia
 division	Arges
 division	Buzau
@@ -1363,6 +1423,7 @@ division	Debrecen
 division	Csongrád County
 division	Heves County
 division	Central Hungary
+division	Central District
 division	Békés County
 division	Bács-Kiskun County
 division	Baranya
@@ -1503,6 +1564,7 @@ division	Baden-Wuerttemberg
 division	Munich
 division	Rostock
 division	North Rhine Westphalia
+division	Berlin
 division	Netherlands
 division	Milheeze
 division	Utrecht
@@ -1557,6 +1619,7 @@ division	Sardinia
 division	Comines
 division	Cyprus
 division	Italy
+division	Campania
 division	Italian cruise ship
 division	South Tyrol
 division	Lazio
@@ -1622,10 +1685,12 @@ division	Norrbotten
 division	Greece
 division	Thessaloniki
 division	Finland
+division	Uusimaa
 division	Denmark
 division	Portugal
 division	Egypt
 division	Cairo
+division	Kalyoubia
 division	Oueme
 division	Cotonou
 division	Nigeria
@@ -1665,6 +1730,7 @@ division	West Coast Region
 division	Mbour
 division	Touba
 division	Dakar
+division	Kolda
 division	St-Louis
 division	Thies
 division	Blida
@@ -1718,6 +1784,8 @@ division	Buenos Aires
 division	Rio Negro
 division	Distrito Federal
 division	Uruguay
+division	Rivera
+division	Maldonado
 division	Colombia
 division	Meta
 division	Caldas
@@ -1857,6 +1925,7 @@ country	Australia
 country	New Zealand
 country	Saudi Arabia
 country	Qatar
+country	Bahrain
 country	United Arab Emirates
 country	Kuwait
 country	Lebanon
@@ -1881,6 +1950,7 @@ country	Poland
 country	Belarus
 country	Estonia
 country	Lithuania
+country	Bulgaria
 country	Hungary
 country	Croatia
 country	France
