@@ -53,6 +53,7 @@ location	Aichi
 location	Tokyo
 location	Kyoto
 location	Gyeonggi
+location	Uijeongbu
 location	Chungcheongnam
 location	Seoul
 location	Kathmandu
@@ -129,6 +130,7 @@ location	Tehatta
 location	Nadiad
 location	Kapadvanj
 location	Mahemdavad
+location	Manama
 location	Dhanera
 location	Darjeeling
 location	Singapore
@@ -149,6 +151,8 @@ location	Gilgit
 location	Riyadh
 location	Guediawaye
 location	Mbao
+location	Keur Massar
+location	Sangalkam
 location	Yeumbeul
 location	Velingara
 location	Hawali
@@ -571,6 +575,7 @@ location	Braine-le-Château
 location	Forchies-la-Marche
 location	Yernée-Fraineux
 location	Starnberg
+location	Tuebingen
 location	Strasbourg
 location	Rome
 location	Naples
@@ -822,6 +827,10 @@ location	Mogi Das Cruzes
 location	San Carlos de Bariloche
 location	Quilmes
 location	Babahoyo
+location	Cayambe
+location	Riobamba
+location	Ibarra
+location	Urcuqui
 location	Florianopolis
 location	Niteroi
 location	Joinville
@@ -892,7 +901,7 @@ location	Asotin County
 location	Benton County
 location	Kittitas County
 location	Seattle
-location	Los Angeles
+location	Los Angeles County
 location	Imperial County
 location	San Francisco County
 location	California
@@ -921,7 +930,7 @@ location	Santa Clara County
 location	Davis
 location	Grant County WA
 location	Grant County WI
-location	Winnebago County
+location	Winnebago County WI
 location	Lafayette County
 location	Rock County
 location	Green County
@@ -936,9 +945,12 @@ location	Clark County
 location	Umatilla County
 location	Phoenix
 location	Chicago
+location	Winnebago County IL
 location	Illinois
 location	Indianapolis
 location	Wisconsin
+location	Manitowoc County
+location	Brown County WI
 location	Dane County
 location	Boston
 location	Houston
@@ -1025,6 +1037,15 @@ location	Buchanan County
 location	Crawford County
 location	Fillmore County
 location	Thiensville
+location	Montgomery County NY
+location	Mchenry County
+location	Cook County
+location	Lake County
+location	Montgomery County PA
+location	Dodge County
+location	Sheboygan County
+location	Outagamie County
+location	Door County
 location	Racine
 location	Cudahy
 location	Mequon
@@ -1101,7 +1122,6 @@ location	Al Matariyyah
 location	Kfar Saba
 
 
-
 division	Mongolia
 division	China
 division	Hubei
@@ -1152,7 +1172,7 @@ division	Nara
 division	Osaka
 division	Kyoto
 division	Kanagawa
-division	Gyeonggi
+division	Gyeonggi Province
 division	Chungcheongnam
 division	Seoul
 division	South Korea
@@ -1194,6 +1214,7 @@ division	Iran
 division	Tehran
 division	Semnan
 division	Bahrain
+division	Capital Governorate
 division	Doha
 division	Dhaka
 division	Yeumbeul
@@ -1377,6 +1398,8 @@ division	Buzau
 division	Constanta
 division	Brasov
 division	Poland
+division	Łódzkie
+division	Opolskie
 division	Mazowieckie
 division	Warminsko-Mazurskie
 division	Slask
@@ -1711,6 +1734,7 @@ division	Ben Arous
 division	Algeria
 division	Ouarzazate
 division	Lagos
+division	Ondo State
 division	Uganda
 division	Kenya
 division	Democratic Republic of the Congo
@@ -1812,6 +1836,8 @@ division	Para
 division	Antioquia
 division	Bogota
 division	Quito
+division	Chimborazo
+division	Imbabura
 division	Guayas
 division	Pichincha
 division	Peru
