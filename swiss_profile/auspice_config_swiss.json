@@ -39,6 +39,11 @@
       "type": "categorical"
     },
     {
+      "key": "subclade_membership",
+      "title": "Emerging clade",
+      "type": "categorical"
+    },
+    {
       "key": "host",
       "title": "Host",
       "type": "categorical"
