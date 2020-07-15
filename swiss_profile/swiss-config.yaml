@@ -1,0 +1,2 @@
+
+localrules: "swiss_profile/localrules.smk"

@@ -1,7 +1,7 @@
 configfile:
   - defaults/parameters.yaml
   - swiss_profile/builds.yaml
-  - nextstrain_profiles/nextstrain-scicore/scicore-config.yaml
+  - swiss_profile/swiss-config.yaml
 
 keep-going: True
 printshellcmds: True
