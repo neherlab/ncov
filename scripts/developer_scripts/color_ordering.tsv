@@ -663,9 +663,15 @@ location	Eupen
 location	Büllingen
 
 ### Czech Republic
+# Plzeň Region
+location	Domažlice
+
 # Vysocina Region
 location	Bela - Ledec Na Sazavou
 location	Kynice
+
+# South Moravian Region
+location	Brno
 
 # Hranice Na Moravě
 location	Prostějov
@@ -1088,6 +1094,15 @@ location	Velingara
 # Western Cape Province
 location	Cape Town Metro
 
+# KwaZulu-Natal
+location	Amajuba
+location	uMgungundlovu
+location	uThukela
+location	Ugu
+location	eThekwini
+location	iLembe
+location	Zululand
+
 ################
 
 # South America
@@ -1361,9 +1376,10 @@ location	Panola County
 location	Wabasha County
 location	Fillmore County
 location	Winona County
+location	Houston County
 
 # Iowa
-location	Fayette County
+location	Buchanan County
 location	Winneshiek County
 location	Allamakee County
 
@@ -1395,6 +1411,7 @@ location	Colorado Springs
 location	Crawford County
 location	Chippewa Falls
 location	Trempealeau County
+location	Whitehall County
 location	La Crosse County
 location	Vernon County
 location	Jackson County
@@ -1594,6 +1611,7 @@ division	Narail
 division	Bagherhat
 division	Tangail
 division	Bangladesh
+division	Barishal
 division	Dhaka
 division	Narayanganj
 division	Chittagong
@@ -1646,6 +1664,7 @@ division	Madhya Pradesh
 division	India
 division	Telangana
 division	Andhra Pradesh
+division	Lucknow
 division	Uttar Pradesh
 division	Odisha
 division	Bihar
@@ -1800,6 +1819,7 @@ division	Keelung
 ### Thailand
 division	Phuket
 division	Trang
+division	Samut Songkhram
 division	Nonthaburi
 division	Bangkok
 division	Samut Prakarn
@@ -1960,6 +1980,7 @@ division	Osijek
 division	Cyprus
 
 ### Czech Republic
+division	Plzeň Region
 division	Usti nad Labem
 division	Litomerice-Brnay
 division	Prague
@@ -1967,6 +1988,7 @@ division	Melnik
 division	Czech Republic
 division	Jihlava
 division	Vysocina Region
+division	South Moravian Region
 division	Hranice Na Moravě
 
 ### Denmark
@@ -2270,6 +2292,7 @@ division	Cotonou
 division	Oueme
 
 ### Democratic Republic of the Congo
+division	Kongo Central
 division	Kinshasa
 division	Democratic Republic of the Congo
 division	Haut-Katanga
@@ -2290,6 +2313,10 @@ division	Greater Accra
 ### Kenya
 division	Kenya
 
+### Mali
+division	Bamako
+division	Mopti
+
 ### Morocco
 division	Casablanca
 division	Rabat
@@ -2302,6 +2329,8 @@ division	Ogun State
 division	Oyo State
 division	Kwara State
 division	Osun State
+division	Ondo State
+division	Ekiti State
 division	Nigeria
 
 ### Senegal
@@ -2417,6 +2446,8 @@ division	Imbabura
 
 ### Peru
 division	Lima
+division	Huanuco
+division	Ica
 
 ### Uruguay
 division	Montevideo
@@ -2607,6 +2638,7 @@ country	Egypt
 country	Gambia
 country	Ghana
 country	Kenya
+country	Mali
 country	Morocco
 country	Nigeria
 country	Senegal
