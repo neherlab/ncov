@@ -114,8 +114,7 @@
     "geo_resolution": "division",
     "map_triplicate": true,
     "branch_label": "clade",
-    "transmission_lines": false,
-    "panels": ["map","tree","entropy"]
+    "transmission_lines": false
   },
   "filters": [
     "country",
