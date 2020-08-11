@@ -12,6 +12,12 @@ builds:
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
 
+  ccc:
+    subsampling_scheme: cluster_sampling
+    geographic_scale: country
+    country: Switzerland
+    title: "Phylogenetic analysis of Swiss SARS-CoV-2 clusters in their international context"
+
 inactive_builds:
   basel-stadt:
     subsampling_scheme: canton
@@ -75,6 +81,20 @@ subsampling:
       priorities:
         type: "proximity"
         focus: "country"
+
+  # Default subsampling logic for clusters
+  cluster_sampling:
+    # Focal samples for country
+    cluster:
+      group_by: "division year month"
+      seq_per_group: 5000
+    # Contextual samples from country's region
+    global:
+      group_by: "year month"
+      seq_per_group: 30
+      priorities:
+        type: "proximity"
+        focus: "cluster"
 
   # Default subsampling logic for divisions
   canton:

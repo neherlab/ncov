@@ -1,7 +1,8 @@
-localrules: filter, partition_sequences, aggregate_alignments, mask, subsample_focus, subsample_context, subsample_regions, adjust_metadata_regions, clades, colors, recency, export, incorporate_travel_history, fix_colorings, all_regions, export_all_regions, export_gisaid, incorporate_travel_history_gisaid, incorporate_travel_history_zh, export_zh, dated_json, fix_colorings_zh, fix_colorings_gisaid, finalize, pangolin, rename_legacy_clades
+localrules: filter, partition_sequences, aggregate_alignments, mask, adjust_metadata_regions, clades, colors, recency, export, incorporate_travel_history,   finalize,  rename_legacy_clades
 
 
 ruleorder: finalize_swiss > finalize
+ruleorder: extract_cluster > subsample
 
 rule add_labels:
     message: "Remove extraneous colorings for main build and move frequencies"
@@ -43,3 +44,23 @@ rule finalize_swiss:
             --output {output.auspice_json} 2>&1 | tee {log} &&
         cp {input.frequencies} {output.tip_frequency_json}
         """
+
+rule extract_cluster:
+    input:
+        cluster = "swiss_profile/cluster_{build_name}.txt",
+        alignment = rules.mask.output.alignment
+    output:
+        cluster_sample = "results/{build_name}/sample-cluster.fasta"
+    run:
+        from Bio import SeqIO
+
+        with open(input.cluster) as fh:
+            cluster = set([x.strip() for x in fh.readlines()])
+
+        seq_out = open(output.cluster_sample, 'w')
+        for s in SeqIO.parse(input.alignment, 'fasta'):
+            if s.id in cluster:
+                SeqIO.write(s, seq_out, 'fasta')
+
+        seq_out.close()
+
