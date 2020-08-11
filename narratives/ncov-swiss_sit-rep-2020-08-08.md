@@ -94,7 +94,11 @@ Now we are showing the mutations, or differences, on the x-axis. Sequences which
 
 <br>
 
-We can now see that the Swiss sequences are 'basal' (at the base) of this cluster, and are also basal to the Latvian and English sequences. This would support the idea that this cluster spread from Switzerland to England and Latvia - but it's important to note we can't rule out other possibilities.
+We can now see that the Swiss sequences are 'basal' (at the base) of this cluster, and are also basal to the Latvian and English sequences. This would support the idea that this cluster spread from Switzerland to England and Latvia - but it's important to note we can't rule out other possibilities. 
+
+<br>
+
+For example, other countries could have been involved, but sequences from this cluster may not have been sampled in those countries at the time. The number of samples and timing of sampling has differed greatly across Europe, and some countries, like the UK, are 'oversampled' in comparison to others. This can bias our view, as we're more likely to have samples from the UK than other countries, even though other countries could also have played a role in transmission clusters. 
 
 <br>
 
@@ -111,11 +115,11 @@ Though these samples were taken between mid-June and late July, we can see that 
 
 <br>
 
-Many of the samples are related much more recently, though - they 'coalesce' (two branches join to be one branch) in June and July. This indicates the variant has been spreading more recently. 
+Many of the samples are related much more recently, though - they 'coalesce' (two branches join to be one branch) in June and July. This indicates recent or ongoing transmission. 
 
 <br>
 
-Looking between this slide and the previous slide, we can see the group of 11 sequences in the middle, from Basel-Land, are closely related in time and genetically. This may have been an outbreak.
+Looking between this slide and the previous slide, we can see the group of 11 sequences in the middle, from Basel-Land, are closely related in time and genetically. This may have been an outbreak centered in Basel-Land.
 
 <br>
 
@@ -124,21 +128,15 @@ _cluster 1_
 
 <!-- ############ SLIDE BREAK ############# -->
 <!-- This is left-side text -->
-# [UK-Latvia-Swiss Cluster links to Serbia](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=country&label=mlabel:20B/A15972G&m=div&p=grid&legend=closed&d=tree,map&r=country)
+# [UK-Latvia-Swiss Cluster Larger Picture](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=country&label=mlabel:20B/G10265A&m=div&p=grid&legend=closed&d=tree,map&r=country)
 
-If we zoom out slightly on this cluster, and go back to coloring by country and displaying the 'mutation' view, we can see it's part of a larger cluster, containing more sequences from Switzerland, Denmark (green), Serbia (blue on left), and Italy (yellow at bottom). 
-
-<br>
-
-We can see that the Serbian sequences are basal to the whole larger cluster. This is an example of how genetic sequencing can inform us where clusters in one country may originate: Switzerland seems to have had cases imported from Serbia, and gone on to seed a large transmission cluster in England, and two cases in Latvia.
+We've switched back to coloring by country and displaying the 'mutation' view - as well as zooming out slightly. Now, the cluster on the previous slide is the top-center group of 62 sequences (just above the group of purple sequences). 
 
 <br>
 
-Separately, Denmark may also have imported the variant circulating in Serbia.
+We can now see the initial cluster is part of a larger cluster, containing more Swiss sequences at the base (yellow, bottom-left - also identical to sequences from other countries) and just below the initial cluster. This may indicate that this variant has been circulating in Switzerland from early in the epidemic and has diversified to form this larger cluster.
 
-<br>
-
-*Can we find links to articles about Serbian imports? Is this cluster likely to be them?*.
+However, it's also possible that the later Swiss sequences are due to an independant introduction from another country of a lineage that also shares history with the early Swiss sequences.
 
 <br>
 
@@ -266,7 +264,7 @@ Filtering out two sequences from Italy and Norway (cases posibly exported from S
 
 <br>
 
-Many of the coalescent events in the tree (where two branches come together to become one branch) occur after June 1st, suggesting that this cluster has more recent growth, after the epidemic peak in Switzerland.
+Many of the coalescent events in the tree (where two branches come together to become one branch) occur after June 1st, suggesting that there is recent transmission in this cluster, after the epidemic peak in Switzerland.
 
 <br>
 
