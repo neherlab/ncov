@@ -66,9 +66,9 @@ In this situation report, we focus on looking at some clusters of Swiss sequence
 # [UK-Latvia-Swiss Cluster](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=country&label=mlabel:20B/C15720T&p=grid&legend=closed&d=tree,map&r=country)
 
 What do we mean when we say 'cluster'? Generally, we mean a group of sequences that are closely genetically related. We often put other criteria on them as well - here, we'll be looking at closely related sequences from Switzerland.
-
+<br>
 In the example on the left, you can see Swiss sequences in yellow. We might call all of them one large cluster, since they are all closely related on the tree, but we might also identify smaller clusters within that larger cluster - like the group of 11 in the middle. 
-
+<br>
 We can then look at non-Swiss sequences nearby - here we see sequences from England (orange) and Latvia (purple), which seem to be connected to the Swiss sequences.
 
 _You can mouse over a country on the map to more easily identify the sequences on the right._
@@ -80,14 +80,14 @@ _cluster 1_
 <!-- ############ SLIDE BREAK ############# -->
 # [UK-Latvia-Swiss Cluster](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=country&m=div&label=mlabel:20B/C15720T&p=grid&legend=closed&d=tree,map&r=country)
 
-Now we are showing the mutations, or differences, on the x-axis. Sequences which line vertically on a line are identical, and horizontal lines represent differences in the sequences (mutations).
+Now we are showing the mutations, or differences, on the x-axis. Sequences which align vertically together are identical, and horizontal lines represent differences in the sequences (mutations).
 
-We can now see that the Swiss sequences are 'basal' (at the base) of this cluster, and are also basal to the Latvian and English sequences. This would support the idea that this cluster spread from Switzerland to England and Latvia - but it's important to know we can't rule out other possibilities.
+We can now see that the Swiss sequences are 'basal' (at the base) of this cluster, and are also basal to the Latvian and English sequences. This would support the idea that this cluster spread from Switzerland to England and Latvia - but it's important to note we can't rule out other possibilities.
 
 _cluster 1_
 
 <!-- ############ SLIDE BREAK ############# -->
-# [UK-Latvia-Swiss Cluster](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=division&label=mlabel:20B/C15720T&p=grid&legend=closed&d=tree,map&f_country=Switzerland)
+# [UK-Latvia-Swiss Cluster](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=division&label=mlabel:20B/C15720T&p=grid&legend=closed&d=tree,map&f_country=Switzerland&r=division)
 
 By filtering to just look at sequences from Switzerland, coloring by canton, and going back to 'time' view, we can see this viral variant has been found across Switzerland, in 11 cantons.
 
