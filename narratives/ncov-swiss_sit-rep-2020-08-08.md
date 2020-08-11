@@ -65,8 +65,10 @@ In this situation report, we focus on looking at some clusters of Swiss sequence
 <!-- ############ SLIDE BREAK ############# -->
 # [UK-Latvia-Swiss Cluster](https://nextstrain.org/groups/swiss/ncov/switzerland/2020-08-08?c=country&label=mlabel:20B/C15720T&p=grid&legend=closed&d=tree,map&r=country)
 
-What do we mean when we say 'cluster'? Generally, we mean a group of sequences that are closely genetically related. We often put other criteria on them as well - here, we'll be looking at closely related sequences from Switzerland.
+What do we mean when we say 'cluster'? Generally, we mean a group of sequences that are closely genetically related. We often put other criteria on them as well - here, we'll be looking at closely related sequences from Switzerland. TEST.
+
 <br>
+
 In the example on the left, you can see Swiss sequences in yellow. We might call all of them one large cluster, since they are all closely related on the tree, but we might also identify smaller clusters within that larger cluster - like the group of 11 in the middle. 
 <br>
 We can then look at non-Swiss sequences nearby - here we see sequences from England (orange) and Latvia (purple), which seem to be connected to the Swiss sequences.
