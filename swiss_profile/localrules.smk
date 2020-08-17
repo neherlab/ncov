@@ -17,7 +17,7 @@ rule add_labels:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/add_labels.py \
+        python3 scripts/add_labels.py \
             --input {input.auspice_json} \
             --tree {input.tree} \
             --mutations {input.mutations} \
@@ -38,7 +38,7 @@ rule finalize_swiss:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/fix-colorings.py \
+        python3 scripts/fix-colorings.py \
             --input {input.auspice_json} \
             --output {output.auspice_json} 2>&1 | tee {log} &&
         cp {input.frequencies} {output.tip_frequency_json}
