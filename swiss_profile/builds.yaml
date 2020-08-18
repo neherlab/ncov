@@ -12,7 +12,7 @@ builds:
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
 
-  ccc:
+  cluster:
     subsampling_scheme: cluster_sampling
     geographic_scale: country
     country: Switzerland

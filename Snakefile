@@ -17,19 +17,19 @@ if "builds" not in config:
     }
 
 # if want to run builds for clusters
-if os.path.isdir("swiss_profile/clusters/"):
+if os.path.isdir("swiss_profile/clusters/") and "cluster" in config['builds'] and "cluster_sampling" in config["subsampling"]:
     cluster_names = [w.replace("swiss_profile/clusters/cluster_","").replace(".txt", "") for w in glob.glob("swiss_profile/clusters/cluster_*.txt")]
     for new_clus in cluster_names:
         new_sample_scheme = "cluster_sampling_{}".format(new_clus)
-        config["builds"][new_clus] = {
-            "subsampling_scheme": new_sample_scheme,
-            "geographic_scale": "country",
-            "country": "Switzerland",
-            "title": "Phylogenetic analysis of Swiss SARS-CoV-2 clusters in their international context - cluster {}".format(new_clus)
-        }
+        # use cluster build as 'template' for each individual cluster build
+        config["builds"][new_clus] = copy.deepcopy(config["builds"]["cluster"])
+        config["builds"][new_clus]["subsampling_scheme"] = new_sample_scheme
+        config["builds"][new_clus]["title"] = config["builds"]["cluster"]["title"]+" - cluster {}".format(new_clus)        
+
         #make a new subsample scheme for each cluster - excluding that cluster from the non-focal set
         config["subsampling"][new_sample_scheme] = copy.deepcopy(config["subsampling"]["cluster_sampling"])
         config["subsampling"][new_sample_scheme]["global"]["exclude"] = "--exclude swiss_profile/clusters/cluster_{}.txt".format(new_clus)
+    config["builds"].pop("cluster")  # get rid of the 'template' build
 
 BUILD_NAMES = list(config["builds"].keys())
 
