@@ -47,7 +47,7 @@ rule finalize_swiss:
 
 rule extract_cluster:
     input:
-        cluster = "swiss_profile/cluster_{build_name}.txt",
+        cluster = "swiss_profile/clusters/cluster_{build_name}.txt",
         alignment = rules.mask.output.alignment
     output:
         cluster_sample = "results/{build_name}/sample-cluster.fasta"

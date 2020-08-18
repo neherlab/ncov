@@ -2,6 +2,7 @@ from os import environ
 from socket import getfqdn
 from getpass import getuser
 from snakemake.utils import validate
+import glob
 
 configfile: "defaults/parameters.yaml"
 validate(config, schema="workflow/schemas/config.schema.yaml")
@@ -13,6 +14,17 @@ if "builds" not in config:
             "subsampling_scheme": "region_global",
         }
     }
+
+# if want to run builds for clusters
+if os.path.isdir("swiss_profile/clusters/"):
+    cluster_names = [w.replace("swiss_profile/clusters/cluster_","").replace(".txt", "") for w in glob.glob("swiss_profile/clusters/cluster_*.txt")]
+    for new_clus in cluster_names:
+        config["builds"][new_clus] = {
+            "subsampling_scheme": "cluster_sampling",
+            "geographic_scale": "country",
+            "country": "Switzerland",
+            "title": "Phylogenetic analysis of Swiss SARS-CoV-2 clusters in their international context - cluster {}".format(new_clus)
+        }
 
 BUILD_NAMES = list(config["builds"].keys())
 
