@@ -39,3 +39,7 @@ Pikine	Dakar
 Mumbai	Maharashtra
 Marseille	Provence-Alpes-Côte d'Azur
 Prague-Miskovice	Prague
+Narayanganj	Dhaka
+Prilep	Pelagonia
+Kumanovo	Northeastern Region MK
+Shtip	Eastern Region MK

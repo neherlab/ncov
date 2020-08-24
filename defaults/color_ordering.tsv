@@ -172,6 +172,11 @@ location	Kathmandu
 
 ### Bangladesh
 # Chattogram
+location	Noakhali
+location	Kabirhat
+location	Companigonj
+location	Begumganj
+location	Laxmipur Sadar
 location	Chandpur
 location	Brahmanbaria
 
@@ -195,6 +200,7 @@ location	Uttara
 location	Tejgaon
 location	Gulshan
 location	Jatrabari
+location	Narayanganj
 location	Kodomtoly
 
 # Rajshahi
@@ -1340,6 +1346,16 @@ location	Radom
 # Central Hungary
 location	Budapest
 
+### North Macedonia
+# Pelagonia
+location	Prilep
+
+# Northeastern Region MK
+location	Kumanovo
+
+# Eastern Region MK
+location	Shtip
+
 ### Greece
 # Central Greece
 location	Livadeia
@@ -1392,6 +1408,10 @@ location	Copiapo
 # Amazonas
 location	Manaus
 
+# Rondonia
+location	Jaru
+location	Porto Velho
+
 # Paraná
 location	Curitiba
 
@@ -1405,15 +1425,20 @@ location	Brasilia
 # São Paulo
 location	Presidente Venceslau
 location	Rio Claro
+location	Americana
 location	Hortolandia
+location	Peruibe
 location	Barueri
 location	Itapecerica Da Serra
+location	Itatiba
 location	Osasco
 location	Caieiras
 location	São Paulo
 location	Diadema
 location	Sao Bernardo do Campo
 location	Maua
+location	Sao Vicente
+location	Guarujá
 location	Mogi Das Cruzes
 
 # Rio de Janeiro
@@ -1677,9 +1702,6 @@ location	Anchorage
 location	Fairbanks
 location	Southeast Alaska
 
-# Grand Princess
-location	Sonoma County
-
 # Oregon
 location	Columbia County OR
 location	Washington County OR
@@ -1722,6 +1744,7 @@ location	Asotin County
 location	Humboldt County
 location	Grand Princess Cruise Ship
 location	Sonoma County
+location	Lake County CA
 location	Marin County
 location	San Francisco
 location	San Francisco County
@@ -1730,12 +1753,20 @@ location	Solano County
 location	Contra Costa County
 location	Davis
 location	Alameda County
+location	Sutter County
 location	Santa Clara County
 location	Sacramento County
 location	San Joaquin County
 location	Monterey County CA
+location	Merced County
 location	San Luis Obispo County
+location	Tuolumne County
+location	Santa Barbara County
+location	Fresno County
+location	Kings County
+location	Madera County
 location	Ventura County
+location	Kern County
 location	Los Angeles County
 location	Orange County CA
 location	San Diego
@@ -1800,6 +1831,7 @@ location	St. Louis MO
 # Wisconsin
 location	Crawford County
 location	Trempealeau County
+location	Eau Claire County
 location	Chippewa County WI
 location	La Crosse County
 location	Vernon County
@@ -1808,6 +1840,7 @@ location	Grant County WI
 location	Monroe County
 location	Richland County WI
 location	Lafayette County
+location	Iowa County WI
 location	Juneau County
 location	Sauk County
 location	Adams County WI
@@ -1842,12 +1875,13 @@ location	Racine County
 location	Door County
 
 # Illinois
+location	Jo Daviess County
 location	Ogle County
 location	Winnebago County IL
 location	Mchenry County
 location	Kane County
 location	Dupage County
-location	Lake County
+location	Lake County IL
 location	Cook County
 location	Chicago
 
@@ -1873,6 +1907,7 @@ location	Fairfield County SC
 
 # Pennsylvania
 location	Pittsburgh
+location	Allegheny County
 location	Montgomery County PA
 
 # New Jersey
@@ -2056,6 +2091,7 @@ division	Nur-Sultan
 
 ### Pakistan
 division	Karachi
+division	Pakistan
 division	Rawalpindi
 division	Khyber Pakhtunkhwa
 division	Islamabad
@@ -2105,7 +2141,6 @@ division	Barishal
 division	Khulna
 division	Narail
 division	Jhenaidha
-division	Narayanganj
 division	Dhaka
 division	Tangail
 division	Rajshahi
@@ -2305,6 +2340,7 @@ division	Yaounde
 
 ### Ghana
 division	Greater Accra
+division	Ghana
 
 ### Sierra Leone
 division	Sierra Leone
@@ -2709,7 +2745,11 @@ division	Cacak
 division	Novi Sad
 
 ### North Macedonia
+division	Skopje
+division	Pelagonia
 division	North Macedonia
+division	Northeastern Region MK
+division	Eastern Region MK
 
 ### Greece
 division	Athens
@@ -2859,6 +2899,7 @@ division	South America
 ### Brazil
 division	Acre
 division	Amazonas
+division	Rondonia
 division	Mato Grosso
 division	Rio Grande do Sul
 division	Brazil
@@ -2884,9 +2925,11 @@ division	Alagoas
 ### Peru
 division	Arequipa
 division	Ica
+division	Cuzco
 division	Lima
 division	Huanuco
 division	Lambayeque
+division	Loreto
 
 ### Ecuador
 division	Galapagos
