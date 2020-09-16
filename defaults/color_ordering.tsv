@@ -235,6 +235,7 @@ location	Narail
 location	Jhenaidah
 
 # Dhaka
+location	Tangail
 location	Mohammadpur
 location	Mirpur
 location	Agargaon
@@ -1364,6 +1365,7 @@ location	Domažlice
 location	Plzeň
 
 # Usti nad Labem
+location	Litvinov
 location	Všebořice
 
 # Prague
@@ -1502,6 +1504,9 @@ location	Hortolandia
 location	Itariri
 location	Campinas
 location	Peruibe
+location	Rio Verde
+location	Cotia
+location	Jandira
 location	Barueri
 location	Itapecerica Da Serra
 location	Itatiba
@@ -2014,7 +2019,6 @@ location	Chicago
 location	Indianapolis
 
 # Ohio
-location	Cincinnati
 location	Columbus OH
 location	Cuyahoga County
 
@@ -2278,7 +2282,6 @@ division	Chattogram
 division	Barishal
 division	Khulna
 division	Dhaka
-division	Tangail
 division	Rajshahi
 division	Bangladesh
 division	Mymensingh
@@ -2776,6 +2779,7 @@ division	Slovenia
 division	Skane
 division	Kalmar
 division	Halland
+division	Gotland
 division	Småland
 division	Jonkoping
 division	Vastra Gotaland
