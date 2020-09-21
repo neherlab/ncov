@@ -205,6 +205,7 @@ location	Faridabad
 location	Gurugram
 
 # Uttarakhand
+location	Roorkee
 location	Dehradun
 location	Haridwar
 location	Uttarkashi
@@ -212,6 +213,9 @@ location	Tehri Garhwal
 location	Pauri Garhwal
 location	Rudraprayag
 location	Chamoli
+
+# Punjab
+location	Rupnagar
 
 # Ladakh
 location	Kargil
@@ -273,6 +277,10 @@ location	Chengdu
 # Chongqing
 location	Yongchuan
 location	Zhongxian
+
+# Hunan
+location	Huaihua
+location	Shaoyang
 
 # Hubei
 location	Jingzhou
@@ -460,12 +468,19 @@ location	Accra
 # Kolda
 location	Velingara
 
+# Diourbel
+location	Touba
+
 # Dakar
 location	Pikine
 location	Guediawaye
 location	Yeumbeul
 location	Mbao
+location	Keur Massar
 location	Sangalkam
+
+# Thies
+location	Mbour
 
 ### Egypt
 # Cairo
@@ -513,6 +528,7 @@ location	Penacova
 ### Spain
 # Canary Islands
 location	Las Palmas
+location	Lanzarote
 
 # Galicia
 location	Muros
@@ -524,6 +540,7 @@ location	Boiro
 location	Santa Comba
 location	Rianjo
 location	Negreira
+location	Vigo
 location	Padrón
 location	Ames
 location	Pontecesures
@@ -560,11 +577,11 @@ location	Jerez De La Frontera
 location	Conil de la Frontera
 location	Mairena Aljarafe
 location	Sevilla
+location	Cordoba ES
 location	Tarifa
 location	Algeciras
 location	San Roque
 location	La Linea de la Concepcion
-location	Cordoba
 location	Benalmadena
 location	Antequera
 location	Alhaurin de la Torre
@@ -582,6 +599,7 @@ location	Nerja
 location	Frailes
 location	Valderrubio
 location	Cijuela
+location	Fuente Vaqueros
 location	Pinos Puente
 location	Santa Fe
 location	Vegas del Genil
@@ -617,10 +635,73 @@ location	Huescar
 location	Almeria
 location	Puebla de Don Fadrique
 
+# Castilla y Leon
+location	Brazuelo
+location	Val de San Lorenzo
+location	Valdeviejas
+location	Astorga
+location	La Carrera de Otero
+location	Castro de Cepeda
+location	San Roman de la Vega
+location	Posada de la Valduerna
+location	Riego de la Vega
+location	Leon
+location	Antonan del Valle
+location	Estebanez de la Calzada
+location	Palacios de la Valduerna
+location	San Cristobal de la Polantera
+location	Villarejo de Orbigo
+location	La Baneza
+location	Benavides de Orbigo
+location	Veguellina de Orbigo
+location	San Pedro de Pegas
+location	Castrillo de San Pelayo
+location	Bercianos del Paramo
+location	Montejos del Camino
+location	La Virgen del Camino
+location	Quintana de Raneros
+location	La Robla
+location	San Andres del Rabanedo
+location	Trobajo del Camino
+location	Villaquilambre
+location	Villaobispo de las Regueras
+location	Garrafe de Torio
+location	Valencia de Don Juan
+location	Villaturiel
+
+# Cantabria
+location	Cabezon de la Sal
+location	Santillana
+location	Puente San Miguel
+location	Los Corrales de Buelna
+location	Santiago de Cartes
+location	Torrelavega
+location	Suances
+location	Polanco
+location	Zurita
+location	Carandia
+location	Valderredible
+location	Pielagos
+location	Renedo
+location	Oruna
+location	Liencres
+location	Santa Cruz de Bezana
+location	La Penilla
+location	Muriedas
+location	Maliano
+location	Santander
+location	Pontejos
+location	Marina de Cudeyo
+location	Ramales de la Victoria
+location	Santona
+location	Laredo
+location	Castro Urdiales
+
 # Madrid
 location	Fuenlabrada
 location	Parla
 location	Leganés
+location	Madrid
 location	Alcobendas
 location	Rivas-Vaciamadrid
 location	San Fernando de Henares
@@ -632,6 +713,7 @@ location	Ambite
 
 # Castilla la Mancha
 location	Ayna
+location	Cuenca ES
 location	Socuellamos
 location	Villarrobledo
 location	San Clemente
@@ -639,7 +721,6 @@ location	Riopar
 location	Lezuza
 location	Bogarra
 location	Balazote
-location	Cuenca
 location	Villanueva de la Jara
 location	Tazona
 location	Albacete
@@ -651,48 +732,73 @@ location	Tobarra
 location	Almansa
 
 # La Rioja
+location	Leiva
 location	Ezcaray
 location	Ojacastro
 location	Santo Domingo de la Calzada
 location	Casalarreina
+location	Ciruena
 location	Haro
 location	San Vicente de la Sonsierra
 location	Najera
+location	Camprovin
+location	Torrecilla en Cameros
+location	Navarrete
 location	Nalda
 location	Albelda de Iregua
 location	Lardero
 location	Logrono
 location	Alberite
+location	Clavijo
 location	Villamediana de Iregua
 location	Agoncillo
 location	Herce
+location	Arnedo
 location	El Villar de Arnedo
 location	Pradejon
 location	Autol
 location	Calahorra
+location	Ventas del Bano
+location	Aldeanueva de Ebro
 location	Alfaro
 
 # Basque Country
+location	Musques
 location	Portugalete
+location	Baracaldo
+location	Bilbao
 location	Bermeo
 location	Bizkaia
 location	Vitoria-Gasteiz
+location	Mondragon
+location	San Sebastian
 location	Donostia-San Sebastian
 
 # Navarra
 location	Fitero
+location	Tudela
 location	Cintruenigo
 location	Peralta
+location	Lodosa
+location	Viana
 location	Tafalla
+location	Artajona
 location	Barasoain
 location	Echavarri
 location	Torres De Elorz
 location	Zulueta
 location	Noain
 location	Cizur Menor
+location	Zizur Mayor
 location	Mutilva
 location	Baranain
 location	Pamplona
+location	Sarriguren
+location	Mendillorri
+location	Burlada
+location	Huarte
+location	Villava
+location	Gartzain
 
 # Murcia
 location	Murcia
@@ -702,38 +808,70 @@ location	Miramar
 location	Almenara
 location	Chilches
 location	Elda
+location	Antella
+location	Llombai
 location	Olleria
+location	Massalaves
+location	Carlet
 location	Segorbe
+location	Guadassuar
+location	Alginet
+location	Torrent
+location	Picassent
+location	Alaquas
+location	Carcaixent
 location	Beniganim
+location	Quart de Poblet
+location	Algemesi
+location	Alzira
 location	Soneja
+location	Benifaio
 location	Valencia Horta
+location	Almussafes
 location	Albal
+location	Godella
+location	Sollana
 location	Bonrepos i Mirambell
+location	Tavernes Blanques
 location	Museros
 location	Almassera
 location	Llutxent
 location	Valencia
 location	Alboraya
+location	Alboraia
 location	Meliana
+location	Albalat dels Sorells
 location	Gilet
+location	Massamagrell
 location	Albuixech
+location	Sueca
 location	Simat de la Valldigna
 location	El Puig
+location	Favara
 location	Sagunt
 location	Tavernes de la Valldigna
+location	Cullera
 location	Grau de Sagunt
+location	El Dosel
 location	Palma de Gandia
 location	Canet d'en Berenguer
 location	Xeraco
 location	Benirredra
 location	Gandia
+location	Piles
 location	Oliva
+location	Castello de la Plana
+location	Castellon de la Plana
 location	Puzol
 
 # Aragon
 location	Teruel
 location	Alcaniz
+location	Caspe
+location	Fraga
 location	Zaragoza
+location	Tamarite de Litera
+location	Monzon
 
 # Catalunya
 location	Jorba
@@ -751,6 +889,7 @@ location	Tiana
 location	Granollers
 location	Vilasar de Mar
 location	Mataro
+location	Palamos
 
 # Balear Islands
 location	Ibiza
@@ -883,6 +1022,7 @@ location	Beerst
 # Ieper
 location	Poperinge
 location	Vlamertinge
+location	Langemark
 location	Geluwe
 
 # Oostende
@@ -1044,6 +1184,7 @@ location	Auderghem
 # Antwerpen
 location	Berchem
 location	Hemiksem
+location	Aartselaar
 location	Wilrijk
 location	Ekeren
 location	Deurne
@@ -1249,12 +1390,18 @@ location	Hardinxveld Giessendam
 
 # North Holland
 location	Haarlem
+location	Beverwijk
+location	Schiphol
+location	Amsterdam West
 location	Diemen
+location	Wervershoof
 location	Naarden
 
 # Utrecht
-location	Houten
+location	Overvecht
 location	Utrecht
+location	Houten
+location	Amersfoort
 
 # North Brabant
 location	Eindhoven
@@ -1262,6 +1409,7 @@ location	Helmond
 location	Oisterwijk
 location	Tilburg
 location	Loon op zand
+location	Heeswijk Dinther
 location	Berlicum
 location	Oss
 location	Nieuwendijk
@@ -1270,6 +1418,9 @@ location	Blaricum
 
 # Flevoland
 location	Zeewolde
+
+# Friesland
+location	Franeker
 
 # Drenthe
 location	Coevorden
@@ -1371,13 +1522,17 @@ location	Všebořice
 # Prague
 location	Prague-Miskovice
 
+# Central Bohemian Region
+location	Mlada Boleslav
+
 # Vysocina Region
 location	Bela - Ledec Na Sazavou
 location	Kynice
 
 # South Moravian Region
-location	Breclav
+location	Znojmo
 location	Brno
+location	Breclav
 
 # Olomouc Region
 location	Litovel
@@ -1388,6 +1543,10 @@ location	Fryšták
 
 # Hranice Na Moravě
 location	Prostějov
+
+# Moravian-Silesian Region
+location	Albrechtice
+location	Cesky Tesin
 
 ### Poland
 # Wielkopolskie
@@ -1583,6 +1742,10 @@ location	General Villamil Playas
 location	Guayaquil
 location	San Jacinto de Yaguachi
 
+# Loja
+location	Macara
+location	Catamayo
+
 # Los Rios
 location	Babahoyo
 location	Quevedo
@@ -1590,6 +1753,9 @@ location	Ventanas
 
 # Esmeraldas
 location	Esmeraldas
+
+# Azuay
+location	Cuenca EC
 
 # Bolivar EC
 location	Guaranda
@@ -1614,6 +1780,9 @@ location	Urcuqui
 # Carchi
 location	Awa Reserve
 
+# Napo
+location	Tena
+
 # Orellana
 location	Coca
 location	Orellana
@@ -1625,9 +1794,11 @@ location	Leticia
 # Narino
 location	Tumaco
 location	Ipiales
+location	Pasto
 
 # Cauca
 location	Popayan
+location	Santander de Quilichao
 
 # Huila
 location	Neiva
@@ -1653,6 +1824,9 @@ location	Tolemaida
 # Quindio
 location	Armenia
 
+# Cartago CO
+location	Cartago CO
+
 # Risaralda
 location	Pereira
 location	Dosquebradas
@@ -1665,6 +1839,7 @@ location	Pacho
 location	Chia
 location	Cajica
 location	Zipaquira
+location	Suesca
 location	Choconta
 
 # Caldas
@@ -1672,6 +1847,7 @@ location	Anserma
 location	Manizales
 
 # Boyaca
+location	Tunja
 location	Santa Sofia
 location	Togui
 location	Santana
@@ -1696,6 +1872,7 @@ location	Cucuta
 # Cordoba CO
 location	Tierralta
 location	Monteria
+location	Cienaga de Oro
 
 # Bolivar
 location	Cartagena
@@ -1708,6 +1885,7 @@ location	Cienaga
 location	Santa Marta
 
 # Atlantico
+location	Soledad
 location	Barranquilla
 
 ################
@@ -1843,7 +2021,7 @@ location	Mason County
 location	San Juan County
 location	Thurston County
 location	Cowlitz County
-location	Clark County
+location	Clark County WA
 location	Kirkland
 location	Pierce County
 location	Snohomish County
@@ -1898,6 +2076,9 @@ location	San Diego
 location	San Diego County
 location	Imperial County
 
+# Nevada
+location	Clark County NV
+
 # Idaho
 location	Madison County
 
@@ -1913,8 +2094,10 @@ location	Denver County
 location	Minnehaha County
 
 # Texas
+location	El Paso
 location	Bexar County
 location	Houston
+location	Harris
 location	Greater Houston Area
 location	Panola County
 
@@ -1972,7 +2155,9 @@ location	Lafayette County
 location	Iowa County WI
 location	Juneau County
 location	Sauk County
+location	Marathon County
 location	Adams County WI
+location	Lincoln County
 location	Green County
 location	Dane County
 location	Verona WI
@@ -2047,6 +2232,7 @@ location	Camden County
 location	Burlington County
 location	Hudson County
 location	Essex County
+location	Morris County
 location	Bergen County
 
 # New York
@@ -2057,6 +2243,7 @@ location	New York City
 location	Queens
 location	Nassau County
 location	Manhattan
+location	New York County
 location	Bronx
 location	New Rochelle
 location	Passaic County
@@ -2262,7 +2449,7 @@ division	Delhi
 division	Haryana
 division	Uttarakhand
 division	Punjab
-division	Jammu
+division	Jammu and Kashmir
 division	Ladakh
 
 ### Sri Lanka
@@ -2321,6 +2508,7 @@ division	Sichuan
 division	China
 division	Chongqing
 division	Guangxi
+division	Hunan
 division	Hubei
 division	Henan
 division	Guangdong
@@ -2351,15 +2539,20 @@ division	Lao Cai
 division	Hong Kong
 
 ### Indonesia
+division	North Sumatra
 division	Banten
 division	Jakarta
 division	West Java
 division	Special Region of Yogyakarta
 division	Central Java
 division	East Java
+division	Center Kalimantan
 division	Indonesia
+division	Bali
+division	South Kalimantan
 division	East Kalimantan
 division	North Sulawesi
+division	Papua
 
 ### Brunei
 division	Brunei
@@ -2472,6 +2665,9 @@ division	Haut-Katanga
 division	Sud Kivu
 division	Nord Kivu
 
+### Gabon
+division	Libreville
+
 ### Kenya
 division	Kenya
 
@@ -2520,10 +2716,9 @@ division	West Coast Region
 
 ### Senegal
 division	Kolda
-division	Mbour
+division	Diourbel
 division	Dakar
 division	Thies
-division	Touba
 division	St-Louis
 
 ### Mali
@@ -2598,15 +2793,16 @@ division	Grand Canary Islands
 division	Galicia
 division	Extremadura
 division	Asturias
+division	Ceuta
 division	Andalusia
 division	Castilla y Leon
+division	Cantabria
 division	Spain
 division	Madrid
 division	Castilla la Mancha
 division	Melilla
 division	La Rioja
 division	Basque Country
-division	Donostia-San Sebatian
 division	Navarra
 division	Murcia
 division	Comunitat Valenciana
@@ -2620,6 +2816,9 @@ division	Scotland
 division	Wales
 division	United Kingdom
 division	England
+
+### Andorra
+division	Andorra
 
 ### France
 division	Pays de la Loire
@@ -2828,6 +3027,7 @@ division	Usti nad Labem
 division	Litomerice-Brnay
 division	Prague
 division	Melnik
+division	Central Bohemian Region
 division	Czech Republic
 division	Jihlava
 division	Vysocina Region
@@ -2835,6 +3035,7 @@ division	South Moravian Region
 division	Olomouc Region
 division	Zlin
 division	Hranice Na Moravě
+division	Moravian-Silesian Region
 
 ### Bosnia and Herzegovina
 division	Bihac
@@ -2921,6 +3122,7 @@ division	Greece
 division	Thessaloniki
 
 ### Lithuania
+division	Marijampoles Apskritis
 division	Lithuania
 division	Vilnius
 
@@ -3117,24 +3319,25 @@ division	Santa Elena
 division	Manabi
 division	Guayas
 division	Daule
+division	Loja
 division	Los Rios
 division	Esmeraldas
+division	Azuay
 division	Bolivar EC
 division	Zamora-Chinchipe
 division	Chimborazo
 division	Pichincha
 division	Imbabura
 division	Carchi
+division	Napo
 division	Orellana
 
 ### Colombia
 division	Departamento de Amazonas
-division	Pasto
 division	Narino
 division	Cauca
 division	Huila
 division	Colombia
-division	Santander de Quilichao
 division	Meta
 division	Valle del Cauca
 division	Tolima
@@ -3143,21 +3346,17 @@ division	Bogota
 division	Cartago CO
 division	Risaralda
 division	Cundinamarca
-division	Suesca
 division	Caldas
 division	Boyaca
-division	Tunja
 division	Choco
 division	Antioquia
 division	Santander
 division	Norte de Santander
 division	Cordoba CO
 division	Bolivar
-division	Cienaga de Oro
 division	Cesar
 division	Magdalena
 division	Atlantico
-division	Soledad
 
 ### Suriname
 division	Suriname
@@ -3357,6 +3556,7 @@ country	South Africa
 country	Madagascar
 country	Zambia
 country	Democratic Republic of the Congo
+country	Gabon
 country	Kenya
 country	Uganda
 country	Cameroon
@@ -3381,6 +3581,7 @@ country	Portugal
 country	Ireland
 country	Spain
 country	United Kingdom
+country	Andorra
 country	France
 country	Belgium
 country	Netherlands
