@@ -41,5 +41,16 @@ Marseille	Provence-Alpes-Côte d'Azur
 Prague-Miskovice	Prague
 Narayanganj	Dhaka
 Prilep	Pelagonia
-Kumanovo	Northeastern Region MK
-Shtip	Eastern Region MK
+Quito	Pichincha
+Kargil	Ladakh
+Rabnita	Rezina
+Chia	Cundinamarca
+Medellin	Antioquia
+Tolemaida	Tolima
+Tangail	Dhaka
+Taipei	Taiwan
+Valencia	Comunitat Valenciana
+Houston	Texas
+Bergen	Vestland
+Counties Manukau	Auckland
+Waitemata	Auckland
