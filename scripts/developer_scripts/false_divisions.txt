@@ -39,3 +39,18 @@ Pikine	Dakar
 Mumbai	Maharashtra
 Marseille	Provence-Alpes-Côte d'Azur
 Prague-Miskovice	Prague
+Narayanganj	Dhaka
+Prilep	Pelagonia
+Quito	Pichincha
+Kargil	Ladakh
+Rabnita	Rezina
+Chia	Cundinamarca
+Medellin	Antioquia
+Tolemaida	Tolima
+Tangail	Dhaka
+Taipei	Taiwan
+Valencia	Comunitat Valenciana
+Houston	Texas
+Bergen	Vestland
+Counties Manukau	Auckland
+Waitemata	Auckland
