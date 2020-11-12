@@ -256,7 +256,9 @@ def collect_labs(data, table_file_name):
                 s += lab + ": "
                 if country in lab_dictionary and lab.lower() in lab_dictionary[country]:
                     s += bold(lab_dictionary[country][lab.lower()])
-                    lab_collection[region][country].append(lab_dictionary[country][lab.lower()])
+                    for l in lab_dictionary[country][lab.lower()].split(", "):
+                        if l not in lab_collection[region][country]:
+                            lab_collection[region][country].append(l)
                 else:
                     s += bold("?")
                     lab_collection[region][country].append("???")
@@ -272,7 +274,9 @@ def collect_labs(data, table_file_name):
                 s += lab
                 if country in lab_dictionary and lab.lower() in lab_dictionary[country]:
                     s += ": " + bold(lab_dictionary[country][lab.lower()])
-                    lab_collection[region][country].append(lab_dictionary[country][lab.lower()])
+                    for l in lab_dictionary[country][lab.lower()].split(", "):
+                        if l not in lab_collection[region][country]:
+                            lab_collection[region][country].append(l)
                 s += "\n"
             print(s)
 
@@ -285,7 +289,9 @@ def collect_labs(data, table_file_name):
                 s += author
                 if country in lab_dictionary and author.lower() in lab_dictionary[country]:
                     s += ": " + bold(lab_dictionary[country][author.lower()])
-                    lab_collection[region][country].append(lab_dictionary[country][author.lower()])
+                    for a in lab_dictionary[country][author.lower()].split(", "):
+                        if a not in lab_collection[region][country]:
+                            lab_collection[region][country].append(a)
                 s += "\n"
             print(s)
 
@@ -361,6 +367,8 @@ def prepare_tweet(counts, lab_collection):
         ("New sequences from ", " can be seen on ")
     ]
 
+    the = ["United Kingdom", "USA"]
+
     total = 0
     tweet_collection = {}
     lengths = {}
@@ -372,7 +380,10 @@ def prepare_tweet(counts, lab_collection):
             for country in lab_collection[region]:
                 number = sum(counts[country].values())
                 total += number
-                s = country + " (" + str(number) + ")"
+                s = ""
+                if country in the:
+                    s += "the "
+                s += country + " (" + str(number) + ")"
                 labs = lab_collection[region][country]
                 countries.append(s)
                 handles = handles + labs
@@ -417,7 +428,7 @@ def prepare_tweet(counts, lab_collection):
     lengths.pop(first_region)
 
     while len(lengths) > 0:
-        current_region = min(lengths)
+        current_region = min(lengths, key=lengths.get)
         best_partner = ""
         for region, length in sorted(lengths.items(), key=lambda x: x[1]):
             if region == current_region:
