@@ -10,9 +10,6 @@ rule download:
         aws s3 cp s3://nextstrain-ncov-private/sequences.fasta.gz - | gunzip -cq > {output.sequences:q}
         """
 
-from datetime import date
-from treetime.utils import numeric_date
-
 rule filter:
     message:
         """
@@ -31,7 +28,8 @@ rule filter:
     params:
         min_length = config["filter"]["min_length"],
         exclude_where = config["filter"]["exclude_where"],
-        date = numeric_date(date.today())
+        min_date = config["filter"]["min_date"],
+        date = date.today().strftime("%Y-%m-%d")
     conda: config["conda_environment"]
     shell:
         """
@@ -40,6 +38,7 @@ rule filter:
             --metadata {input.metadata} \
             --include {input.include} \
             --max-date {params.date} \
+            --min-date {params.min_date} \
             --exclude {input.exclude} \
             --exclude-where {params.exclude_where}\
             --min-length {params.min_length} \
@@ -281,9 +280,22 @@ def _get_subsampling_settings(wildcards):
     subsampling_settings = config["subsampling"][subsampling_scheme]
 
     if hasattr(wildcards, "subsample"):
-        return subsampling_settings[wildcards.subsample]
-    else:
-        return subsampling_settings
+        subsampling_settings = subsampling_settings[wildcards.subsample]
+
+        # If users have supplied both `max_sequences` and `seq_per_group`, we
+        # throw an error instead of assuming the user prefers one setting over
+        # another by default.
+        if subsampling_settings.get("max_sequences") and subsampling_settings.get("seq_per_group"):
+            raise Exception(f"The subsampling scheme '{subsampling_scheme}' for build '{wildcards.build_name}' defines both `max_sequences` and `seq_per_group`, but these arguments are mutually exclusive. If you didn't define both of these settings, this conflict could be caused by using the same subsampling scheme name as a default scheme. In this case, rename your subsampling scheme, '{subsampling_scheme}', to a unique name (e.g., 'custom_{subsampling_scheme}') and run the workflow again.")
+
+        # If users have supplied neither `max_sequences` nor `seq_per_group`, we
+        # throw an error because the subsampling rule will still group by one or
+        # more fields and the lack of limits on this grouping could produce
+        # unexpected behavior.
+        if not subsampling_settings.get("max_sequences") and not subsampling_settings.get("seq_per_group"):
+            raise Exception(f"The subsampling scheme '{subsampling_scheme}' for build '{wildcards.build_name}' must define `max_sequences` or `seq_per_group`.")
+
+    return subsampling_settings
 
 
 def get_priorities(wildcards):
@@ -317,8 +329,17 @@ def _get_specific_subsampling_setting(setting, optional=False):
             # build's region, country, division, etc. as needed for subsampling.
             build = config["builds"][wildcards.build_name]
             value = value.format(**build)
-        else:
+        elif value is not None:
+            # If is 'seq_per_group' or 'max_sequences' build subsampling setting,
+            # need to return the 'argument' for augur
+            if setting == 'seq_per_group':
+                value = f"--sequences-per-group {value}"
+            elif setting == 'max_sequences':
+                value = f"--subsample-max-sequences {value}"
+
             return value
+        else:
+            value = ""
 
         # Check format strings that haven't been resolved.
         if re.search(r'\{.+\}', value):
@@ -331,7 +352,17 @@ def _get_specific_subsampling_setting(setting, optional=False):
 rule subsample:
     message:
         """
-        Subsample all sequences into a {wildcards.subsample} set for build '{wildcards.build_name}' with {params.sequences_per_group} per {params.group_by}
+        Subsample all sequences by '{wildcards.subsample}' scheme for build '{wildcards.build_name}' with the following parameters:
+
+         - group by: {params.group_by}
+         - sequences per group: {params.sequences_per_group}
+         - subsample max sequences: {params.subsample_max_sequences}
+         - min-date: {params.min_date}
+         - max-date: {params.max_date}
+         - exclude: {params.exclude_argument}
+         - include: {params.include_argument}
+         - query: {params.query_argument}
+         - priority: {params.priority_argument}
         """
     input:
         sequences = rules.mask.output.alignment,
@@ -340,12 +371,17 @@ rule subsample:
         priorities = get_priorities
     output:
         sequences = "results/{build_name}/sample-{subsample}.fasta"
+    log:
+        "logs/subsample_{build_name}_{subsample}.txt"
     params:
         group_by = _get_specific_subsampling_setting("group_by"),
-        sequences_per_group = _get_specific_subsampling_setting("seq_per_group"),
+        sequences_per_group = _get_specific_subsampling_setting("seq_per_group", optional=True),
+        subsample_max_sequences = _get_specific_subsampling_setting("max_sequences", optional=True),
         exclude_argument = _get_specific_subsampling_setting("exclude", optional=True),
         include_argument = _get_specific_subsampling_setting("include", optional=True),
         query_argument = _get_specific_subsampling_setting("query", optional=True),
+        min_date = _get_specific_subsampling_setting("min_date", optional=True),
+        max_date = _get_specific_subsampling_setting("max_date", optional=True),
         priority_argument = get_priority_argument
     conda: config["conda_environment"]
     shell:
@@ -354,12 +390,15 @@ rule subsample:
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --include {input.include} \
+            {params.min_date} \
+            {params.max_date} \
             {params.exclude_argument} \
             {params.include_argument} \
             {params.query_argument} \
             {params.priority_argument} \
             --group-by {params.group_by} \
-            --sequences-per-group {params.sequences_per_group} \
+            {params.sequences_per_group} \
+            {params.subsample_max_sequences} \
             --output {output.sequences} 2>&1 | tee {log}
         """
 
@@ -452,7 +491,7 @@ rule tree:
         "logs/tree_{build_name}.txt"
     benchmark:
         "benchmarks/tree_{build_name}.txt"
-    threads: 16
+    threads: 8
     resources:
         # Multiple sequence alignments can use up to 40 times their disk size in
         # memory, especially for larger alignments.
@@ -501,6 +540,7 @@ rule refine:
         date_inference = config["refine"]["date_inference"],
         divergence_unit = config["refine"]["divergence_unit"],
         clock_filter_iqd = config["refine"]["clock_filter_iqd"],
+        keep_polytomies = "--keep-polytomies" if config["refine"].get("keep_polytomies", False) else "",
         timetree = "" if config["refine"].get("no_timetree", False) else "--timetree"
     conda: config["conda_environment"]
     shell:
@@ -513,6 +553,7 @@ rule refine:
             --output-node-data {output.node_data} \
             --root {params.root} \
             {params.timetree} \
+            {params.keep_polytomies} \
             --clock-rate {params.clock_rate} \
             --clock-std-dev {params.clock_std_dev} \
             --coalescent {params.coalescent} \
@@ -616,13 +657,29 @@ rule traits:
             --sampling-bias-correction {params.sampling_bias_correction} 2>&1 | tee {log}
         """
 
+def _get_clade_files(wildcards):
+    if "subclades" in config["builds"][wildcards.build_name]:
+        return [config["files"]["clades"], config["builds"][wildcards.build_name]["subclades"]]
+    else:
+        return config["files"]["clades"]
+
+rule clade_files:
+    input:
+        clade_files = _get_clade_files
+    output:
+        "results/{build_name}/clades.tsv"
+    shell:
+        '''
+        cat {input.clade_files} > {output}
+        '''
+
 rule clades:
     message: "Adding internal clade labels"
     input:
         tree = rules.refine.output.tree,
         aa_muts = rules.translate.output.node_data,
         nuc_muts = rules.ancestral.output.node_data,
-        clades = config["files"]["clades"]
+        clades = rules.clade_files.output
     output:
         clade_data = "results/{build_name}/clades.json"
     log:
@@ -873,9 +930,10 @@ rule export:
         auspice_config = lambda w: config["builds"][w.build_name]["auspice_config"] if "auspice_config" in config["builds"][w.build_name] else config["files"]["auspice_config"],
         colors = lambda w: config["builds"][w.build_name]["colors"] if "colors" in config["builds"][w.build_name] else ( config["files"]["colors"] if "colors" in config["files"] else rules.colors.output.colors.format(**w) ),
         lat_longs = config["files"]["lat_longs"],
-        description = config["files"]["description"]
+        description = lambda w: config["builds"][w.build_name]["description"] if "description" in config["builds"][w.build_name] else config["files"]["description"]
     output:
-        auspice_json = "results/{build_name}/ncov_with_accessions.json"
+        auspice_json = "results/{build_name}/ncov_with_accessions.json",
+        root_sequence_json = "results/{build_name}/ncov_with_accessions_root-sequence.json"
     log:
         "logs/export_{build_name}.txt"
     params:
@@ -888,6 +946,7 @@ rule export:
             --metadata {input.metadata} \
             --node-data {input.node_data} \
             --auspice-config {input.auspice_config} \
+            --include-root-sequence \
             --colors {input.colors} \
             --lat-longs {input.lat_longs} \
             --title {params.title:q} \
@@ -900,7 +959,7 @@ rule incorporate_travel_history:
     message: "Adjusting main auspice JSON to take into account travel history"
     input:
         auspice_json = rules.export.output.auspice_json,
-        colors = lambda w: config["files"]["colors"] if "colors" in config["files"] else rules.colors.output.colors.format(**w),
+        colors = lambda w: config["builds"][w.build_name]["colors"] if "colors" in config["builds"][w.build_name] else ( config["files"]["colors"] if "colors" in config["files"] else rules.colors.output.colors.format(**w) ),
         lat_longs = config["files"]["lat_longs"]
     params:
         sampling = _get_sampling_trait_for_wildcards,
@@ -925,10 +984,12 @@ rule finalize:
     message: "Remove extraneous colorings for main build and move frequencies"
     input:
         auspice_json = rules.incorporate_travel_history.output.auspice_json,
-        frequencies = rules.tip_frequencies.output.tip_frequencies_json
+        frequencies = rules.tip_frequencies.output.tip_frequencies_json,
+        root_sequence_json = rules.export.output.root_sequence_json
     output:
         auspice_json = "auspice/ncov_{build_name}.json",
-        tip_frequency_json = "auspice/ncov_{build_name}_tip-frequencies.json"
+        tip_frequency_json = "auspice/ncov_{build_name}_tip-frequencies.json",
+        root_sequence_json = "auspice/ncov_{build_name}_root-sequence.json"
     log:
         "logs/fix_colorings_{build_name}.txt"
     conda: config["conda_environment"]
@@ -937,5 +998,6 @@ rule finalize:
         python3 scripts/fix-colorings.py \
             --input {input.auspice_json} \
             --output {output.auspice_json} 2>&1 | tee {log} &&
-        cp {input.frequencies} {output.tip_frequency_json}
+        cp {input.frequencies} {output.tip_frequency_json} &&
+        cp {input.root_sequence_json} {output.root_sequence_json}
         """

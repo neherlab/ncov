@@ -4,24 +4,29 @@
         "time" : "00:29:00",
         "qos": "30min",
         "n" : 1,
-        "mem": "16G"
+	"mem": "32G"
+    },
+    "ancestral":
+    {
+        "mem": "64G"
     },
     "refine" :
     {
         "time" : "05:59:00",
         "qos": "6hours",
-        "n" : 1
+        "n" : 1,
+        "mem": "32G"
     },
     "tree" : {
-        "n": 16,
+        "n": 8,
         "qos": "6hours",
         "time" : "05:59:00"
     },
     "align": {
         "n" : 2,
-        "mem": "16G"
+        "mem": "32G"
     },
     "proximity_score":{
-	"mem": "32G"
+	"mem": "64G"
     }
 }

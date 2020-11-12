@@ -39,7 +39,7 @@ subsampling:
     # Focal samples for country
     country:
       group_by: "division year month"
-      seq_per_group: 200
+      max_sequences: 1500
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region:
