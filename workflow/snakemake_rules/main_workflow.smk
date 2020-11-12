@@ -31,6 +31,7 @@ rule filter:
     params:
         min_length = config["filter"]["min_length"],
         exclude_where = config["filter"]["exclude_where"],
+        min_date = config["filter"]["min_date"],
         date = numeric_date(date.today())
     conda: config["conda_environment"]
     shell:
@@ -40,6 +41,7 @@ rule filter:
             --metadata {input.metadata} \
             --include {input.include} \
             --max-date {params.date} \
+            --min-date {params.min_date} \
             --exclude {input.exclude} \
             --exclude-where {params.exclude_where}\
             --min-length {params.min_length} \
@@ -358,6 +360,8 @@ rule subsample:
          - group by: {params.group_by}
          - sequences per group: {params.sequences_per_group}
          - subsample max sequences: {params.subsample_max_sequences}
+         - min-date: {params.min_date}
+         - max-date: {params.max_date}
          - exclude: {params.exclude_argument}
          - include: {params.include_argument}
          - query: {params.query_argument}
@@ -370,6 +374,8 @@ rule subsample:
         priorities = get_priorities
     output:
         sequences = "results/{build_name}/sample-{subsample}.fasta"
+    log:
+        "logs/subsample_{build_name}_{subsample}.txt"
     params:
         group_by = _get_specific_subsampling_setting("group_by"),
         sequences_per_group = _get_specific_subsampling_setting("seq_per_group", optional=True),
@@ -377,6 +383,8 @@ rule subsample:
         exclude_argument = _get_specific_subsampling_setting("exclude", optional=True),
         include_argument = _get_specific_subsampling_setting("include", optional=True),
         query_argument = _get_specific_subsampling_setting("query", optional=True),
+        min_date = _get_specific_subsampling_setting("min_date", optional=True),
+        max_date = _get_specific_subsampling_setting("max_date", optional=True),
         priority_argument = get_priority_argument
     conda: config["conda_environment"]
     shell:
@@ -385,6 +393,8 @@ rule subsample:
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --include {input.include} \
+            {params.min_date} \
+            {params.max_date} \
             {params.exclude_argument} \
             {params.include_argument} \
             {params.query_argument} \
@@ -533,6 +543,7 @@ rule refine:
         date_inference = config["refine"]["date_inference"],
         divergence_unit = config["refine"]["divergence_unit"],
         clock_filter_iqd = config["refine"]["clock_filter_iqd"],
+        keep_polytomies = "--keep-polytomies" if config["refine"].get("keep_polytomies", False) else "",
         timetree = "" if config["refine"].get("no_timetree", False) else "--timetree"
     conda: config["conda_environment"]
     shell:
@@ -545,6 +556,7 @@ rule refine:
             --output-node-data {output.node_data} \
             --root {params.root} \
             {params.timetree} \
+            {params.keep_polytomies} \
             --clock-rate {params.clock_rate} \
             --clock-std-dev {params.clock_std_dev} \
             --coalescent {params.coalescent} \
