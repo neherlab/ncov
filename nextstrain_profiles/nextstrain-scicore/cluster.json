@@ -18,15 +18,15 @@
         "mem": "32G"
     },
     "tree" : {
-        "n": 16,
+        "n": 8,
         "qos": "6hours",
         "time" : "05:59:00"
     },
     "align": {
         "n" : 2,
-        "mem": "16G"
+        "mem": "32G"
     },
     "proximity_score":{
-	"mem": "32G"
+	"mem": "64G"
     }
 }
