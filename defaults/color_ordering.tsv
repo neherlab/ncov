@@ -507,7 +507,21 @@ location	Accra
 
 ### South Africa
 # Western Cape Province
+location	Klipfontein
 location	Cape Town Metro
+location	Mitchells Plain
+location	Tygerberg
+location	Khayelitsha
+location	Stellenbosch
+location	Hessequa
+location	Mossel Bay
+location	Oudtshoorn
+location	George
+location	Beaufort West
+location	Knysna
+
+# Northern Cape
+location	Siyathemba
 
 # KwaZulu-Natal
 location	uMkhanyakude
@@ -530,6 +544,16 @@ location	Amajuba
 ### Egypt
 # Cairo
 location	Al Matariyyah
+
+### Mozambique
+# Gaza
+location	Xai Xai
+
+# Manica
+location	Chimoio
+
+# Cabo Delgado
+location	Pemba
 
 ### Madagascar
 # Analamanga
@@ -1096,13 +1120,18 @@ location	Lille
 # Occitanie
 location	Toulouse
 location	Caraman
+location	Saint-Gely-Du-Fesc
+location	Montpellier
 
 # Auvergne-Rhône-Alpes
 location	Clermont-Ferrand
+location	Mazet-Saint-Voy
+location	Andrezieux-Boutheon
 location	Tarare
 location	Privas
 location	Pollionnay
 location	Craponne
+location	Saint-Genis-Les-Ollieres
 location	Villefranche-sur-Saône
 location	Macon
 location	Lyon
@@ -1110,10 +1139,13 @@ location	Venissieux
 location	Valence
 location	Saint-Priest
 location	Decines
+location	Saint-Jean-de-Bournay
 location	Bourg-en-Bresse
 location	Bourgoin-Jallieu
+location	Saint-Verand
 location	Montagnieu
 location	Oyonnax
+location	Grenoble
 location	Chambery
 location	Saint-Julien-en-Genevois
 location	Contamine-sur-Arve
@@ -1161,8 +1193,11 @@ location	Strasbourg
 location	Bischheim
 
 # Provence-Alpes-Côte d'Azur
+location	Marignane
 location	Marseille
+location	Draguignan
 location	Embrun
+location	Saint-Vallier-de-Thiey
 
 ### Belgium
 # Veurne
@@ -1538,6 +1573,9 @@ location	Eupen
 location	Büllingen
 
 ### Netherlands
+# St Eustatius
+location	St Eustatius
+
 # South Holland
 location	Delft
 location	Nootdorp
@@ -1639,6 +1677,7 @@ location	Siena
 
 # Veneto
 location	Verona IT
+location	Padova
 
 # Lazio
 location	Rome
@@ -1880,15 +1919,27 @@ location	Severomorsk
 # Kaluga
 location	Tovarkovo
 
+# Orel
+location	Orel
+
 # Moscow Oblast
 location	Uvarovka
 location	Lapino
+location	Korolyov
+location	Lyubertsy
+location	Sergiyev Posad
 location	Bronnitsy
 
 # Krasnodar
 location	Anapa
 location	Krasnodar
 location	Sochi
+
+# Rostov
+location	Kamensk-Shakhtinsky
+
+# Ryazan
+location	Ryazan
 
 # Voronezh
 location	Voronezh
@@ -1931,6 +1982,9 @@ location	Kozmodemyansk
 location	Ukhta
 location	Sosnogorsk
 
+# Orenburg
+location	Orenburg
+
 # Perm Krai
 location	Perm
 
@@ -1943,9 +1997,11 @@ location	Pervouralsk
 location	Nizhny Tagil
 location	Krasnouralsk
 location	Kirovgrad
+location	Svobodnyi
 location	Verkhnyaya Pyshma
 location	Ekaterinburg
 location	Zarechny
+location	Asbest
 
 # Khanty-Mansi
 location	Khanty-Mansiysk
@@ -1966,6 +2022,7 @@ location	Muromtsevo
 location	Sedelnikovo
 
 # Novosibirsk
+location	Berdsk
 location	Novosibirsk
 
 # Altai Krai
@@ -2467,6 +2524,10 @@ location	Siquirres
 ### Mexico
 # Baja California
 location	Tijuana
+location	Mexicali
+
+# Sonora
+location	San Luis Rio Colorado
 
 # Durango
 location	Gomez Palacios
@@ -2485,8 +2546,8 @@ location	Douglas County OR
 location	Columbia County OR
 location	Washington County OR
 location	Lane County OR
-location	Marion County
 location	Jackson County OR
+location	Marion County OR
 location	Multnomah County
 location	Clackamas County
 location	Hood River County
@@ -2554,6 +2615,7 @@ location	San Diego
 location	San Diego County
 location	San Bernardino County
 location	Imperial County
+location	Riverside
 
 # Nevada
 location	Clark County NV
@@ -2562,8 +2624,8 @@ location	Clark County NV
 location	Madison County
 
 # Arizona
+location	Yuma
 location	Maricopa County
-location	Phoenix
 
 # Montana
 location	Ravalli County
@@ -2738,20 +2800,17 @@ location	Racine County
 location	Door County
 
 # Illinois
-location	Jo Daviess County
-location	Stephenson County
-location	Ogle County
-location	Winnebago County IL
-location	Boone County
-location	Mchenry County
-location	Kane County
-location	Dupage County
-location	Lake County IL
+location	Saline County
+location	Jackson County IL
 location	Cook County
 location	Chicago
+location	Kane County
+location	Winnebago County IL
+location	Lake County IL
+location	Jo Daviess County
 
 # Indiana
-location	Indianapolis
+location	Marion County IN
 
 # Ohio
 location	Columbus OH
@@ -2759,6 +2818,7 @@ location	Cuyahoga County
 
 # Florida
 location	Walton County
+location	Orange County FL
 location	Miami-Dade County
 location	Palm Beach County
 
@@ -2779,10 +2839,15 @@ location	Montgomery County PA
 # Washington DC
 location	District of Columbia County
 
+# Maryland
+location	Prince George'S County
+
 # Delaware
 location	Sussex County
 location	Kent County
 location	New Castle County
+location	Prospect
+location	Cheshire
 
 # New Jersey
 location	Camden County
@@ -2832,11 +2897,9 @@ location	Trumbull
 location	Seymour
 location	Woodbridge
 location	Bethany
-location	Prospect
 location	West Haven
 location	New Haven County
 location	Hamden
-location	Cheshire
 location	East Haven
 location	North Haven
 location	Wallingford
@@ -2923,8 +2986,9 @@ division	Jenin
 division	Beirut
 
 ### Jordan
-division	Amman
 division	Irbid
+division	Amman
+division	Mafraq
 
 ### Georgia
 division	Georgia (Europe)
@@ -3280,7 +3344,9 @@ division	Nigeria
 
 ### Tunisia
 division	Tunisia
+division	Nabeul
 division	Ben Arous
+division	Tunis
 division	Bizerte
 
 ### Niger
@@ -3298,6 +3364,7 @@ division	Brazzaville
 
 ### Democratic Republic of the Congo
 division	Kongo Central
+division	Kisantu
 division	Kinshasa
 division	Democratic Republic of the Congo
 division	Haut-Katanga
@@ -3309,6 +3376,7 @@ division	Gaborone
 
 ### South Africa
 division	Western Cape Province
+division	Northern Cape
 division	South Africa
 division	North-West
 division	Eastern Cape
@@ -3333,6 +3401,11 @@ division	Kalyoubia
 
 ### Uganda
 division	Uganda
+
+### Mozambique
+division	Gaza
+division	Manica
+division	Cabo Delgado
 
 ### Kenya
 division	Kwale
@@ -3486,6 +3559,7 @@ division	Verviers
 division	Mepel
 
 ### Netherlands
+division	St Eustatius
 division	Zeeland
 division	Leiden
 division	South Holland
@@ -3544,7 +3618,8 @@ division	Trondheim
 division	Innlandet
 division	Oslo
 division	Norway
-division	Tromsogfinnmark
+division	Nordland
+division	Troms Og Finnmark
 
 ### Denmark
 division	Faroe Islands
@@ -3560,6 +3635,7 @@ division	Copenhagen
 division	Bavaria
 division	Baden-Wuerttemberg
 division	Hesse
+division	Thuringia
 division	Germany
 division	North Rhine Westphalia
 division	Berlin
@@ -3773,6 +3849,7 @@ division	Vilnius
 
 ### Romania
 division	Vrancea
+division	Romania
 division	Arges
 division	Mioveni
 division	Valcea
@@ -3864,10 +3941,13 @@ division	Karelia
 division	Tver
 division	Murmansk
 division	Kaluga
+division	Orel
 division	Moscow Oblast
 division	Yaroslavl
 division	Lipetsk
 division	Krasnodar
+division	Rostov
+division	Ryazan
 division	Voronezh
 division	Adygea
 division	Ivanovo
@@ -4289,6 +4369,7 @@ country	Zambia
 country	Rwanda
 country	Egypt
 country	Uganda
+country	Mozambique
 country	Kenya
 country	Madagascar
 country	Somalia
