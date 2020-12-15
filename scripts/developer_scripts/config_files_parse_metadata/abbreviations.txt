@@ -53,8 +53,12 @@ Panama Center	PA
 Victoria	AU
 San Jose	CR
 Cartago CO	CO
+Cartago CR	CR
 Andalusia	ES
 Castilla la Mancha	ES
 Azuay	EC
 Ecuador	EC
 Spain	ES
+Alajuela	CO
+Imbabura	EC
+Heredia	CR
