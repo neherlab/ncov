@@ -6,6 +6,7 @@
 # in the geo_hierarchy to define region, country, division, etc
 custom_rules:
   - nextstrain_profiles/nextstrain/subsampling_ranges.smk
+  - nextstrain_profiles/nextstrain/download_preprocessed.smk
   - swiss_profile/localrules.smk
 
 builds:

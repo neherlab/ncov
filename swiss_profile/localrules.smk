@@ -3,7 +3,6 @@ localrules: adjust_metadata_regions, clade_files, colors, finalize, rename_legac
 
 ruleorder: finalize_swiss > finalize
 ruleorder: extract_cluster > subsample
-ruleorder: download_masked > mask
 
 rule add_labels:
     message: "Remove extraneous colorings for main build and move frequencies"
@@ -64,14 +63,3 @@ rule extract_cluster:
                 SeqIO.write(s, seq_out, 'fasta')
 
         seq_out.close()
-
-
-rule download_masked:
-    message: "Downloading metadata and fasta files from S3"
-    output:
-        sequences = "results/masked.fasta"
-    conda: config["conda_environment"]
-    shell:
-        """
-        aws s3 cp s3://nextstrain-ncov-private/masked.fasta.gz - | gunzip -cq > {output.sequences:q}
-        """
