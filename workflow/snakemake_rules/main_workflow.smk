@@ -414,13 +414,8 @@ rule proximity_score:
         genetic similiarity to sequences in focal set for build '{wildcards.build_name}'.
         """
     input:
-<<<<<<< HEAD
-        alignment = "results/masked.fasta",
-        metadata = rules.download.output.metadata,
-=======
         alignment = "results/filtered.fasta",
         metadata = config["metadata"],
->>>>>>> nextstrain/master
         reference = config["files"]["reference"],
         focal_alignment = "results/{build_name}/sample-{focus}.fasta"
     output:
