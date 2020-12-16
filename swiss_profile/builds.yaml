@@ -9,6 +9,8 @@ custom_rules:
   - nextstrain_profiles/nextstrain/download_preprocessed.smk
   - swiss_profile/localrules.smk
 
+S3_BUCKET: "nextstrain-ncov-private"
+
 builds:
   switzerland:
     subsampling_scheme: switzerland

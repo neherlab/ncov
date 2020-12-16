@@ -1,4 +1,4 @@
-localrules: adjust_metadata_regions, clade_files, colors, finalize, rename_legacy_clades, upload, download_masked, download
+localrules: adjust_metadata_regions, clade_files, colors, finalize, rename_legacy_clades, upload, download_masked, download, download_filtered
 
 
 ruleorder: finalize_swiss > finalize
