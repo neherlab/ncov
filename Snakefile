@@ -95,7 +95,9 @@ rule clean:
     message: "Removing directories: {params}"
     params:
         "results ",
-        "auspice"
+        "auspice",
+        "data/metadata.tsv",
+        "data/sequences.fasta"
     shell:
         "rm -rfv {params}"
 
