@@ -101,6 +101,8 @@ rule clean:
     shell:
         "rm -rfv {params}"
 
+config["nextalign_bin"] = "./nextalign_cli"
+
 rule dump_config:
     run:
         import yaml, sys
@@ -122,3 +124,4 @@ if "localrules" in config:
 if "custom_rules" in config:
     for rule_file in config["custom_rules"]:
         include: rule_file
+

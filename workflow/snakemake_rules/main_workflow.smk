@@ -106,29 +106,6 @@ rule diagnose_excluded:
             --output-exclusion-list {output.to_exclude} 2>&1 | tee {log}
         """
 
-rule prefilter:
-    message:
-        """
-        Pre-filtering sequences for minimal length (before aligning)
-        """
-    input:
-        sequences = config["sequences"],
-        metadata = config["metadata"],
-    output:
-        sequences = "results/prefiltered.fasta"
-    log:
-        "logs/prefiltered.txt"
-    params:
-        min_length = config["filter"]["min_length"],
-    conda: config["conda_environment"]
-    shell:
-        """
-        augur filter \
-            --sequences {input.sequences} \
-            --metadata {input.metadata} \
-            --min-length {params.min_length} \
-            --output {output.sequences} 2>&1 | tee {log}
-        """
 
 rule align:
     message:
@@ -137,10 +114,17 @@ rule align:
           - gaps relative to reference are considered real
         """
     input:
-        sequences = "results/prefiltered.fasta",
-        reference = config["files"]["alignment_reference"]
+        sequences = "data/sequences.fasta",
+        reference = config["files"]["alignment_reference"],
+        gene_map = config["files"]["gene_map"]
     output:
-        alignment = "results/aligned.fasta"
+        alignment = "results/nextalign/sequences.aligned.fasta",
+        translation = "results/nextalign/sequences.gene.S.fasta"
+    params:
+        outdir = "results/nextalign",
+        bin = config["nextalign_bin"],
+        genes = 'S,N',
+	basename = "sequences"
     log:
         "logs/align.txt"
     benchmark:
@@ -149,19 +133,19 @@ rule align:
     conda: config["conda_environment"]
     shell:
         """
-        mafft \
-            --auto \
-            --thread {threads} \
-            --keeplength \
-            --addfragments \
-            {input.sequences} \
-            {input.reference} > {output} 2> {log}
+        {params.bin} \
+            --jobs={threads} \
+            --genemap {input.gene_map} \
+            --genes {params.genes} \
+            --reference {input.reference} \
+            --sequences {input.sequences} \
+            --output-basename {params.basename} --output-dir {params.outdir} 2> {log}
         """
 
 rule diagnostic:
     message: "Scanning aligned sequences {input.alignment} for problematic sequences"
     input:
-        alignment = "results/aligned.fasta",
+        alignment = "results/nextalign/sequences.aligned.fasta",
         metadata = config["metadata"],
         reference = config["files"]["reference"]
     output:
@@ -187,27 +171,19 @@ rule diagnostic:
             --output-exclusion-list {output.to_exclude} 2>&1 | tee {log}
         """
 
-rule refilter:
+rule exclude_file:
     message:
         """
-        excluding sequences flagged in the diagnostic step in file {input.exclude}
+        combine exclusion files: {input}
         """
     input:
-        sequences = "results/aligned.fasta",
-        metadata = config["metadata"],
-        exclude = "results/to-exclude.txt"
+        "results/to-exclude.txt", config["files"]["exclude"]
     output:
-        sequences = "results/aligned-filtered.fasta"
-    log:
-        "logs/refiltered.txt"
+        "results/combined_exclude.txt"
     conda: config["conda_environment"]
     shell:
         """
-        augur filter \
-            --sequences {input.sequences} \
-            --metadata {input.metadata} \
-            --exclude {input.exclude} \
-            --output {output.sequences} 2>&1 | tee {log}
+        cat {input} > {output}
         """
 
 rule mask:
@@ -219,7 +195,7 @@ rule mask:
           - masking other sites: {params.mask_sites}
         """
     input:
-        alignment = "results/aligned-filtered.fasta"
+        alignment = "results/nextalign/sequences.aligned.fasta"
     output:
         alignment = "results/masked.fasta"
     log:
@@ -250,7 +226,7 @@ rule filter:
         sequences = "results/masked.fasta",
         metadata = config["metadata"],
         include = config["files"]["include"],
-        exclude = config["files"]["exclude"]
+        exclude = "results/combined_exclude.txt"
     output:
         sequences = "results/filtered.fasta"
     log:
@@ -643,6 +619,29 @@ rule translate:
             --output-node-data {output.node_data} 2>&1 | tee {log}
         """
 
+rule aa_muts_explicit:
+    message: "Translating amino acid sequences"
+    input:
+        tree = rules.refine.output.tree,
+        translation = rules.align.output.translation
+    output:
+        node_data = "results/{build_name}/aa_muts_explicit.json"
+    params:
+        gene = 'S'
+    log:
+        "logs/aamuts_{build_name}.txt"
+    conda: config["conda_environment"]
+    shell:
+        """
+        python3 scripts/explicit_translation.py \
+            --tree {input.tree} \
+            --translation {input.translation:q} \
+            --gene {params.gene} \
+            --output {output.node_data} 2>&1 | tee {log}
+
+        """
+
+
 rule traits:
     message:
         """
@@ -894,7 +893,8 @@ def _get_node_data_by_wildcards(wildcards):
         rules.rename_subclades.output.clade_data,
         rules.clades.output.clade_data,
         rules.recency.output.node_data,
-        rules.traits.output.node_data
+        rules.traits.output.node_data,
+        rules.aa_muts_explicit.output.node_data
     ]
 
     # Convert input files from wildcard strings to real file names.
