@@ -100,15 +100,18 @@ subsampling:
     country_late:
       group_by: "division year month"
       max_sequences: 2000
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     country_early:
       group_by: "division year month"
       max_sequences: 300
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region_late:
       group_by: "country year month"
       max_sequences: 500
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
@@ -116,6 +119,7 @@ subsampling:
     region_early:
       group_by: "country year month"
       max_sequences: 300
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
@@ -125,6 +129,7 @@ subsampling:
     global_early:
       group_by: "country year month"
       max_sequences: 100
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
@@ -133,6 +138,7 @@ subsampling:
       group_by: "country year month"
       max_sequences: 200
       exclude: "--exclude-where 'region={region}'"
+      sampling_scheme: "--probabilistic-sampling"
       priorities:
         type: "proximity"
         focus: "country_late"
@@ -157,19 +163,23 @@ subsampling:
     division_late:
       group_by: "year month"
       max_sequences: 1000
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
     country_late:
       group_by: "division year month"
       max_sequences: 1000
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     country_early:
       group_by: "division year month"
       max_sequences: 300
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region_late:
       group_by: "country year month"
       max_sequences: 200
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
@@ -177,6 +187,7 @@ subsampling:
     region_early:
       group_by: "country year month"
       max_sequences: 200
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
@@ -186,6 +197,7 @@ subsampling:
     global_early:
       group_by: "country year month"
       max_sequences: 100
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
@@ -193,6 +205,7 @@ subsampling:
     global_late:
       group_by: "country year month"
       max_sequences: 200
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
