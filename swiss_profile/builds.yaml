@@ -11,6 +11,35 @@ custom_rules:
 
 S3_BUCKET: "nextstrain-ncov-private"
 
+cantons:
+  - "Zürich"
+  - "Bern"
+  - "Luzern"
+  - "Uri"
+  - "Schwyz"
+  - "Obwalden"
+  - "Nidwalden"
+  - "Glarus"
+  - "Zug"
+  - "Fribourg"
+  - "Solothurn"
+  - "Basel-Stadt"
+  - "Basel-Landschaft"
+  - "Schaffhausen"
+  - "Appenzell Ausserrhoden"
+  - "Appenzell Innerrhoden"
+  - "Sankt Gallen"
+  - "Graubünden"
+  - "Aargau"
+  - "Thurgau"
+  - "Ticino"
+  - "Vaud"
+  - "Valais"
+  - "Neuchâtel"
+  - "Geneva"
+  - "Jura"
+  - "Liechtenstein"
+
 builds:
   switzerland:
     subsampling_scheme: switzerland
@@ -68,9 +97,13 @@ subsampling:
   # Default subsampling logic for countries
   switzerland:
     # Focal samples for country
-    country:
+    country_late:
       group_by: "division year month"
       max_sequences: 2000
+      exclude: "--exclude-where 'country!={country}'"
+    country_early:
+      group_by: "division year month"
+      max_sequences: 300
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region_late:
@@ -79,23 +112,30 @@ subsampling:
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_late"
     region_early:
       group_by: "country year month"
       max_sequences: 300
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_late"
     # Contextual samples from the rest of the world,
     # excluding the current region to avoid resampling.
-    global:
+    global_early:
       group_by: "country year month"
-      seq_per_group: 2
+      max_sequences: 100
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_late"
+    global_late:
+      group_by: "country year month"
+      max_sequences: 200
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
 
   # Default subsampling logic for clusters
   cluster_sampling:
@@ -114,35 +154,49 @@ subsampling:
   # Default subsampling logic for divisions
   canton:
     # Focal samples for division
-    division:
+    division_late:
       group_by: "year month"
-      seq_per_group: 300
+      max_sequences: 1000
       exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
-    # Contextual samples from division's country
-    country:
+    country_late:
       group_by: "division year month"
-      seq_per_group: 20
-      exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division={division}'"
+      max_sequences: 1000
+      exclude: "--exclude-where 'country!={country}'"
+    country_early:
+      group_by: "division year month"
+      max_sequences: 300
+      exclude: "--exclude-where 'country!={country}'"
+    # Contextual samples from country's region
+    region_late:
+      group_by: "country year month"
+      max_sequences: 200
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
-        focus: "division"
-    # Contextual samples from division's region
-    region:
+        focus: "country_late"
+    region_early:
       group_by: "country year month"
-      seq_per_group: 10
-      exclude: "--exclude-where 'region!={region}' 'country={country}'"
+      max_sequences: 200
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
-        focus: "division"
-    # Contextual samples from the rest of the world, excluding the current
-    # division to avoid resampling.
-    global:
+        focus: "country_late"
+    # Contextual samples from the rest of the world,
+    # excluding the current region to avoid resampling.
+    global_early:
       group_by: "country year month"
-      seq_per_group: 5
+      max_sequences: 100
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
-        focus: "division"
+        focus: "country_late"
+    global_late:
+      group_by: "country year month"
+      max_sequences: 200
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
 
   lac-leman:
     geneva:

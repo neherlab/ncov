@@ -64,6 +64,16 @@ if "builds" not in config:
         }
     }
 
+if config["cantons"]:
+    for canton in config["cantons"]:
+        config["builds"][canton.lower().replace(' ', '-').replace('ü','u').replace("â", "a")] = {
+            "subsampling_scheme": "canton",
+            "geographic_scale": "division",
+            "region": "Europe",
+            "country": "Switzerland",
+            "division": canton
+        }
+
 # Allow users to specify a list of active builds from the command line.
 if config.get("active_builds"):
     BUILD_NAMES = config["active_builds"].split(",")
