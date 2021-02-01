@@ -64,7 +64,7 @@ if "builds" not in config:
         }
     }
 
-if config["cantons"]:
+if "cantons" in config:
     for canton in config["cantons"]:
         config["builds"][canton.lower().replace(' ', '-').replace('ü','u').replace("â", "a")] = {
             "subsampling_scheme": "canton",
