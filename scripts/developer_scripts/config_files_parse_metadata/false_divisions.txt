@@ -168,7 +168,6 @@ Vrbas	South Bačka District
 Vrsac	South Banat District
 Antananarivo	Analamanga
 Shtip	Eastern Region
-Kumanovo	Northeastern Region
 Veles	Vardar
 Ohrid	Southwestern Region
 Bitola	Pelagonia
@@ -209,3 +208,24 @@ Bozen	South Tyrol
 Mamoudzou	Mayotte
 Alpes Maritimes	Provence-Alpes-Côte d'Azur
 Ingiriya	Kalutara
+Sint Michiels	Brugge
+Sint-Amansberg	Gent
+Herthoek	West-Vlaanderen
+Groot-Gelmen	Hasselt
+Ukmergės R.	Vilnius
+Širvintų R.	Vilnius
+Molėtų R.	Utena
+Zarasų R.	Utena
+Kretingos R.	Klaipedos Apskritis
+Visaginas	Utena
+Becej	South Bačka District
+Dolný Kubín	Zilina
+Kuwait City	Al Asimah
+Walhain	Nivelles
+Slaný	Central Bohemian Region
+Rhone Alpes	Auvergne-Rhône-Alpes
+Berchem-Sainte-Agath	Brussels
+Kumanovo	Northeastern Region
+Fleron	Liège
+Marchinne-Au-Pont	Charleroi
+Cape Town	Western Cape Province

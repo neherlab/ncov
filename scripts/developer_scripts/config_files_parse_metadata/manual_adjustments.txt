@@ -64,3 +64,33 @@ Asia/Israel/Central District/Bat Yam	Asia/Israel/Tel Aviv District/Bat Yam
 Asia/Israel/Central District/Herzelia	Asia/Israel/Tel Aviv District/Herzelia
 Asia/Israel/Jerusalem/Maale Edomim	Asia/Palestine/West Bank/Maale-Edumim
 Asia/Israel/Judea and Samaria/Ariel	Asia/Palestine/West Bank/Ariel
+Europe/Serbia/Gracanica/	Europe/Kosovo/Pristina/Gracanica
+Europe/Serbia/Lipljan/	Europe/Kosovo/Pristina/Lipljan
+Europe/Serbia/Strpce/	Europe/Kosovo/Ferizaj/Strpce
+South America/Brazil/Southeast/Minas Gerais	South America/Brazil/Minas Gerais/
+Europe/Belgium/Turnhout/Vorst	Europe/Belgium/Brussels/Forest
+Europe/Lithuania/Ukmergės R./	Europe/Lithuania/Vilnius/Ukmerge
+Europe/Lithuania/Širvintų R./	Europe/Lithuania/Vilnius/Širvintų rajono savivaldybė
+Europe/Lithuania/Kretingos R./	Europe/Lithuania/Klaipedos Apskritis/Kretingos rajono savivaldybė
+Europe/Lithuania/Molėtų R./	Europe/Lithuania/Utena/Molėtų rajono savivaldybės
+Europe/Lithuania/Zarasų R./	Europe/Lithuania/Utena/Zarasų rajono savivaldybė
+Europe/Belgium/Sint-Amansberg/	Europe/Belgium/Gent/Sint-Amandsberg
+Europe/Belgium/Velenje/	Europe/Slovenia/Velenje/
+Europe/Belgium/Bekkenvoort/	Europe/Belgium/Leuven/Bekkevoort
+Europe/Belgium/Wilsbeke/	Europe/Belgium/Tielt/Wielsbeke
+Europe/Belgium/Faulx-Les-Tombes/	Europe/Belgium/Namur/Faulx-les-Tombes
+Europe/Belgium/Berchem-Sainte-Agath/	Europe/Belgium/Brussels/Berchem-Sainte-Agathe
+Europe/Belgium/Raalte/	Europe/Netherlands/Overijssel/Raalte
+North America/Costa Rica/Alajuela/Santiago	North America/Costa Rica/Alajuela/Santiago (Alajuela)
+North America/Costa Rica/Alajuela/San Isidro	North America/Costa Rica/Alajuela/San Isidro (Alajuela)
+North America/Costa Rica/Cartago/San Diego	North America/Costa Rica/Cartago CR/San Diego CR
+South America/Ecuador/Santo Domingo de los Tsachilas/Santo Domingo	South America/Ecuador/Santo Domingo de los Tsachilas/Santo Domingo de los Colorados
+Europe/Belgium/Kappelen/	Europe/Belgium/Antwerpen/Kapellen
+Europe/Belgium/Fontaine-l'Evêque/	Europe/Belgium/Charleroi/Fontaine-l'Évêque
+Europe/Belgium/Montigny-le-Tileul/	Europe/Belgium/Charleroi/Montigny-le-Tilleul
+North America/Puerto Rico/Puerto Rico/*	North America/USA/Puerto Rico/*
+Africa/Gaborone/Lobatse/	Africa/Botswana/Lobatse/
+Africa/South Africa/Eastern Cape/Cape Winelands	Africa/South Africa/Western Cape/Cape Winelands
+Africa/South Africa/Eastern Cape/Middelburg Municipal Clinic	Africa/South Africa/Eastern Cape/Middleburg
+North America/USA/Wisconsin/Chisago County	North America/USA/Minnesota/Chisago County
+North America/USA/Wisconsin/Pine County	North America/USA/Minnesota/Pine County
