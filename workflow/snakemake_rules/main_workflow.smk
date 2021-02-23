@@ -104,34 +104,6 @@ if "use_nextalign" in config and config["use_nextalign"]:
               - gaps relative to reference are considered real
             """
         input:
-<<<<<<< HEAD
-            sequences = config["sequences"],
-            reference = config["files"]["alignment_reference"],
-            gene_map = config["files"]["gene_map"]
-        output:
-            alignment = "results/nextalign/sequences.aligned.fasta",
-            translations = expand("results/nextalign/sequences.gene.{gene}.fasta", gene=config.get('genes', ['S']))
-        params:
-            outdir = "results/nextalign",
-            bin = config["nextalign_bin"],
-            genes = ','.join(config.get('genes', ['S'])),
-        	basename = "sequences"
-        log:
-            "logs/align.txt"
-        benchmark:
-            "benchmarks/align.txt"
-        threads: 16
-        conda: config["conda_environment"]
-        shell:
-            """
-            {params.bin} \
-                --jobs={threads} \
-                --genemap {input.gene_map} \
-                --genes {params.genes} \
-                --reference {input.reference} \
-                --sequences {input.sequences} \
-                --output-basename {params.basename} --output-dir {params.outdir} > {log} 2>&1
-=======
             sequences = lambda wildcards: _get_path_for_input("sequences", wildcards.origin),
             genemap = config["files"]["annotation"],
             reference = config["files"]["alignment_reference"]
@@ -161,27 +133,11 @@ if "use_nextalign" in config and config["use_nextalign"]:
                 --output-basename {params.basename} \
                 --output-fasta {output.alignment} \
                 --output-insertions {output.insertions} > {log} 2>&1
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
             """
 else:
     rule align:
         message:
             """
-<<<<<<< HEAD
-            Aligning sequences to {input.reference}
-              - gaps relative to reference are considered real
-            """
-        input:
-            sequences = config["sequences"],
-            reference = config["files"]["alignment_reference"]
-        output:
-            alignment = "results/aligned.fasta",
-            translations = []
-        log:
-            "logs/align.txt"
-        benchmark:
-            "benchmarks/align.txt"
-=======
             Aligning sequences from {input.sequences} to {input.reference}
             - gaps relative to reference are considered real
             """
@@ -194,7 +150,6 @@ else:
             "logs/align{origin}.txt"
         benchmark:
             "benchmarks/align{origin}.txt"
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
         threads: 16
         conda: config["conda_environment"]
         shell:
@@ -207,46 +162,12 @@ else:
                 {input.sequences} \
                 {input.reference} > {output} 2> {log}
             """
-<<<<<<< HEAD
-
-rule mutation_summary:
-    message: "Summarizing {input.alignment}"
-    input:
-        alignment = rules.align.output.alignment,
-        translations = rules.align.output.translations,
-        reference = config["files"]["alignment_reference"],
-        genemap = config["files"]["gene_map"]
-    output:
-        mutation_summary = "results/mutation_summary.tsv"
-    log:
-        "logs/mutation_summary.txt"
-    params:
-        outdir = "results/nextalign",
-        basename = "sequences"
-    conda: config["conda_environment"]
-    shell:
-        """
-        python3 scripts/mutation_summary.py \
-            --directory {params.outdir} \
-            --basename {params.basename} \
-            --reference {input.reference} \
-            --genemap {input.genemap} \
-            --output {output.mutation_summary} 2>&1 | tee {log}
-        """
-
-=======
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
 
 rule diagnostic:
     message: "Scanning aligned sequences {input.alignment} for problematic sequences"
     input:
-<<<<<<< HEAD
-        alignment = rules.align.output.alignment,
-        metadata = config["metadata"],
-=======
         alignment = lambda wildcards: _get_path_for_input("aligned", wildcards.origin),
         metadata = lambda wildcards: _get_path_for_input("metadata", wildcards.origin),
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
         reference = config["files"]["reference"]
     output:
         diagnostics = "results/sequence-diagnostics{origin}.tsv",
@@ -271,18 +192,6 @@ rule diagnostic:
             --output-exclusion-list {output.to_exclude} 2>&1 | tee {log}
         """
 
-<<<<<<< HEAD
-rule exclude_file:
-    message:
-        """
-        combine exclusion files: {input}
-        """
-    input:
-        "results/to-exclude.txt", config["files"]["exclude"]
-    output:
-        "results/combined_exclude.txt"
-    conda: config["conda_environment"]
-=======
 def _collect_exclusion_files(wildcards):
     # Note that we _always_ exclude the sequences from the (config-defined) exclude file
     # As well as the sequences flagged by the diagnostic step.
@@ -297,7 +206,6 @@ rule exclude_file:
         _collect_exclusion_files
     output:
         "results/exclude{origin}.txt"
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
     shell:
         """
         cat {input} > {output}
@@ -312,11 +220,7 @@ rule mask:
           - masking other sites: {params.mask_sites}
         """
     input:
-<<<<<<< HEAD
-        alignment = rules.align.output.alignment
-=======
         alignment = lambda w: _get_path_for_input("aligned", w.origin)
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
     output:
         alignment = "results/masked{origin}.fasta"
     log:
@@ -350,11 +254,7 @@ rule filter:
         metadata = lambda wildcards: _get_path_for_input("metadata", wildcards.origin),
         # TODO - currently the include / exclude files are not input (origin) specific, but this is possible if we want
         include = config["files"]["include"],
-<<<<<<< HEAD
-        exclude = "results/combined_exclude.txt"
-=======
         exclude = rules.exclude_file.output
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
     output:
         sequences = "results/filtered{origin}.fasta"
     log:
@@ -886,11 +786,7 @@ rule aa_muts_explicit:
     message: "Translating amino acid sequences"
     input:
         tree = rules.refine.output.tree,
-<<<<<<< HEAD
-        translations = rules.align.output.translations
-=======
         translations = lambda w: rules.build_align.output.translations
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
     output:
         node_data = "results/{build_name}/aa_muts_explicit.json"
     params:
@@ -905,15 +801,8 @@ rule aa_muts_explicit:
             --translations {input.translations:q} \
             --genes {params.genes} \
             --output {output.node_data} 2>&1 | tee {log}
-<<<<<<< HEAD
-
         """
 
-
-=======
-        """
-
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
 rule traits:
     message:
         """

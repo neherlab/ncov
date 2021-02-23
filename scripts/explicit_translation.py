@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
 import argparse
 import json
 from Bio import Phylo, SeqIO
