@@ -57,17 +57,19 @@ if __name__ == '__main__':
     )
 
     parser.add_argument('--directory', type=str, required=True, help="directory with nextalign output")
+    parser.add_argument('--alignment', type=str, required=False, help="nucleotide alignment (if not part of default pattern)")
+    parser.add_argument('--insertions', type=str, required=False, help="insertions (if not part of default pattern)")
     parser.add_argument('--basename', type=str, required=True, help="output pattern")
     parser.add_argument('--reference', type=str, required=True, help="reference sequence")
     parser.add_argument('--genemap', type=str, required=True, help="annotation")
-    parser.add_argument('--output', type=str, required=True, help="output file")
+    parser.add_argument('--output', type=str, required=True, help="output tsv file")
     args = parser.parse_args()
 
     res = read_reference(args.reference, args.genemap)
     ref = res['nuc']
     translations = res['translations']
 
-    nucleotide_alignment = os.path.join(args.directory, args.basename+'.aligned.fasta')
+    nucleotide_alignment = args.alignment or os.path.join(args.directory, args.basename+'.aligned.fasta')
     insertions = os.path.join(args.directory, args.basename+'.insertions.csv')
 
     gene_files = glob.glob(os.path.join(args.directory, args.basename+'.gene.*.fasta'))
@@ -81,4 +83,4 @@ if __name__ == '__main__':
         compressed[gene] = pd.DataFrame(res.values(), index=res.keys(), columns=[gene])
 
     res = pd.concat(compressed.values(), axis=1)
-    res.to_csv(args.output, sep=';')
+    res.to_csv(args.output, sep='\t')
