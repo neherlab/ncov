@@ -157,14 +157,6 @@ rule deploy_to_staging:
 rule upload:
     message: "Uploading intermediate files for specified origins to {params.s3_bucket}"
     input:
-<<<<<<< HEAD
-        rules.mask.output.alignment,
-        rules.align.output.alignment,
-        rules.filter.output.sequences,
-        "results/sequence-diagnostics.tsv",
-        "results/flagged-sequences.tsv",
-        "results/to-exclude.txt"
-=======
         expand("results/aligned_{origin}.fasta", origin=config["S3_DST_ORIGINS"]),              # from `rule align`
         expand("results/sequence-diagnostics_{origin}.tsv", origin=config["S3_DST_ORIGINS"]),   # from `rule diagnostic`
         expand("results/flagged-sequences_{origin}.tsv", origin=config["S3_DST_ORIGINS"]),      # from `rule diagnostic`
@@ -172,7 +164,6 @@ rule upload:
         expand("results/masked_{origin}.fasta", origin=config["S3_DST_ORIGINS"]),               # from `rule mask`
         expand("results/filtered_{origin}.fasta", origin=config["S3_DST_ORIGINS"]),             # from `rule filter`
         expand("results/mutation_summary_{origin}.tsv", origin=config["S3_DST_ORIGINS"]),       # from `rule mutation_summary`
->>>>>>> nextstrain/nextalign-rebased-index-seq-pr
     params:
         s3_bucket = config["S3_DST_BUCKET"],
         compression = config["S3_DST_COMPRESSION"]
