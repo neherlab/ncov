@@ -77,7 +77,7 @@ builds:
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
   501Y-V1:
-    subsampling_scheme: switzerland
+    subsampling_scheme: variants
     clade: "20H/501Y.V1"
     geographic_scale: country
     subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
