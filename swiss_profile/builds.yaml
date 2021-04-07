@@ -76,6 +76,32 @@ builds:
     region: Europe
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
+  501Y-V1:
+    subsampling_scheme: switzerland
+    clade: "20H/501Y.V1"
+    geographic_scale: country
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    region: Europe
+    country: Switzerland
+    title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
+  501Y-V2:
+    subsampling_scheme: variants
+    clade: "20H/501Y.V2"
+    geographic_scale: country
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    region: Europe
+    country: Switzerland
+    title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
+  501Y-V3:
+    subsampling_scheme: variants
+    clade: "20J/501Y.V3"
+    geographic_scale: country
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    region: Europe
+    country: Switzerland
+    title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
+
+
 
 inactive_builds:
   ccc:
@@ -184,6 +210,24 @@ subsampling:
       priorities:
         type: "proximity"
         focus: "cluster"
+
+  # Default subsampling logic for variants
+  variants:
+    # Focal samples for country
+    variant:
+      group_by: "division year month"
+      seq_per_group: 1000
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'Nextstrain_clade!={clade}' 'country!={country}'"
+    # Contextual samples from country's region
+    global_late:
+      group_by: "country year month"
+      max_sequences: 500
+      exclude: "--exclude-where 'country={country}'"
+      sampling_scheme: "--probabilistic-sampling"
+      priorities:
+        type: "proximity"
+        focus: "variant"
 
   # Default subsampling logic for divisions
   canton:

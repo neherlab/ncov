@@ -97,7 +97,7 @@ config["conda_environment"] = CONDA_ENV_PATH
 wildcard_constraints:
     # Allow build names to contain alpha characters, underscores, and hyphens
     # but not special strings used for Nextstrain builds.
-    build_name = r'(?:[_a-zA-Z-](?!(tip-frequencies)))+',
+    build_name = r'(?:[_a-zA-Z0-9-](?!(tip-frequencies)))+',
     date = r"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]",
     origin = r"(_[a-zA-Z0-9-]+)?" # origin starts with an underscore _OR_ it's the empty string
 
