@@ -78,7 +78,7 @@ builds:
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
   501Y-V1:
     subsampling_scheme: variants
-    clade: "20H/501Y.V1"
+    clade: "20I/501Y.V1"
     geographic_scale: country
     subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
@@ -220,7 +220,7 @@ subsampling:
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'Nextstrain_clade!={clade}' 'country!={country}'"
     # Contextual samples from country's region
-    global_late:
+    global:
       group_by: "country year month"
       max_sequences: 500
       exclude: "--exclude-where 'country={country}'"
