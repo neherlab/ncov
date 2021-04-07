@@ -216,7 +216,7 @@ subsampling:
     # Focal samples for country
     variant:
       group_by: "division year month"
-      seq_per_group: 1000
+      max_sequences: 1000
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'Nextstrain_clade!={clade}' 'country!={country}'"
     # Contextual samples from country's region
