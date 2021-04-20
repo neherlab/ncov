@@ -80,6 +80,9 @@ if "cantons" in config:
             "division": canton
         }
 
+include: "workflow/snakemake_rules/reference_build_definitions.smk"
+
+
 # Allow users to specify a list of active builds from the command line.
 if config.get("active_builds"):
     BUILD_NAMES = config["active_builds"].split(",")
