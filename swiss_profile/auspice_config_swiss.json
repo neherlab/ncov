@@ -116,6 +116,8 @@
     "location",
     "host",
     "pango_lineage",
+      "clade_membership",
+      "emerging_lineage",
     "author"
   ],
   "panels": ["tree", "map", "entropy", "frequencies"]

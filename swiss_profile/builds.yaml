@@ -72,7 +72,6 @@ builds:
   switzerland:
     subsampling_scheme: switzerland
     geographic_scale: country
-    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
@@ -80,7 +79,6 @@ builds:
     subsampling_scheme: variants
     clade: "20I/501Y.V1"
     geographic_scale: country
-    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
@@ -88,7 +86,6 @@ builds:
     subsampling_scheme: variants
     clade: "20H/501Y.V2"
     geographic_scale: country
-    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
@@ -96,7 +93,6 @@ builds:
     subsampling_scheme: variants
     clade: "20J/501Y.V3"
     geographic_scale: country
-    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
     country: Switzerland
     title: "Phylogenetic analysis of Swiss SARS-CoV-2 genomes in their international context"
