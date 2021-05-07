@@ -147,9 +147,14 @@ subsampling:
   # Default subsampling logic for countries
   switzerland:
     # Focal samples for country
+    country_recent:
+      group_by: "division year month"
+      max_sequences: 1500
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country!={country}'"
     country_late:
       group_by: "division year month"
-      max_sequences: 2000
+      max_sequences: 1000
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     country_early:
@@ -228,14 +233,24 @@ subsampling:
   # Default subsampling logic for divisions
   canton:
     # Focal samples for division
-    division_late:
+    division_recent:
       group_by: "year month"
-      max_sequences: 1000
+      max_sequences: 500
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
+    division_late:
+      group_by: "year month"
+      max_sequences: 700
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
+    country_recent:
+      group_by: "division year month"
+      max_sequences: 500
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country!={country}'"
     country_late:
       group_by: "division year month"
-      max_sequences: 1000
+      max_sequences: 700
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     country_early:
